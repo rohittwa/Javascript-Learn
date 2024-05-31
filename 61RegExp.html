@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RegExp</title>
+		<style>
+			h1, h2, h3{
+				font-family:arial;
+			}
+			p, span, td{
+				font-size:14pt; font-family:arial;
+			}
+			div{
+				background-color:yellow; width:280px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Regular Expression </h1>
+		<hr>
+		
+		<p>
+			A regular expression is a sequence of characters that forms a search pattern. <br>
+			The search pattern can be used for text search and text replace operations.<br><br>
+			
+			Q. What is a Regular Expression?<br>
+			Ans : A regular expression is a sequence of characters that forms a search pattern.<br>
+			When you search for data in a text, you can use this search pattern to describe what you are searching for. <br>
+			A regular expression can be a single character, or a more complicated pattern.<br>
+			Regular expressions can be used to perform all types of text search and text replace operations.<br><br>
+			
+			Syntax :<br>
+			/pattern/modifiers;<br><br>
+			
+			Example:<br>
+			/w3schools/i;<br>
+			/w3schools/i  is a regular expression. <br>
+			w3schools  is a pattern (to be used in a search). <br>
+			i  is a modifier (modifies the search to be case-insensitive). <br><br>
+		</p>
+		
+		<h2> Using String Methods </h2>
+		<span>
+			In JavaScript, regular expressions are often used with the two string methods: search() and replace().<br>
+			The search() method uses an expression to search for a match, and returns the position of the match.<br>
+			The replace() method returns a modified string where the pattern is replaced.<br>
+		</span>
+		
+		<h3> Using String search() With a String </h3>
+		<span>
+			The search() method searches a string for a specified value and returns the position of the match:<br><br>
+			
+			Example:<br>
+			Use a string to do a search for "W3schools" in a string:
+			<div>
+				let text = "Visit W3Schools!";<br>
+				let n = text.search("W3Schools");
+			</div>
+			<br>
+			
+			The result in n will be: <br>
+			6
+		</span><br>
+		
+		<h3> Using String search() With a Regular Expression </h3>
+		<span>
+			Example :<br>
+			Use a regular expression to do a case-insensitive search for "w3schools" in a string:<br>
+			
+			<div>
+				let text = "Visit W3Schools"; <br>
+				let n = text.search(/w3schools/i);
+			</div>
+		</span><br>
+		
+		<h2> Use String replace() With a Regular Expression </h2>
+		<span>
+			Example :
+			Use a case insensitive regular expression to replace Microsoft with W3Schools in a string:
+			
+			<div style="width:420px;">
+				let text = "Visit Microsoft!"; <br>
+				let result = text.replace(/microsoft/i, "W3Schools");
+			</div>
+			
+			The result in res will be:<br>
+			Visit W3Schools!<br><br>
+			
+			Regular expression arguments (instead of string arguments) can be used in the methods above. <br>
+			Regular expressions can make your search much more powerful (case insensitive for example). <br>
+		</span><br>
+		
+		<h2> Using String replace() With a String </h2>
+		<span>
+			The replace() method replaces a specified value with another value in a string:
+			
+			<div style="width:420px;">
+				let text = "Visit Microsoft!"; <br>
+				let result = text.replace("Microsoft", "W3Schools"); 
+			</div>
+		</span><br>
+		
+		<h2> Regular Expression Modifiers </h2>
+		<span>
+			Modifiers can be used to perform case-insensitive more global searches:
+			
+			<table border="1" cellpadding="15px">
+				<tr>
+					<td> <b>Modifier</b> </td>
+					<td> <b>Description</b> </td>
+				</tr>
+				
+				<tr>
+					<td> i </td>
+					<td> Perform case-insensitive matching </td>
+				</tr>
+				
+				<tr>
+					<td> g </td>
+					<td>Perform a global match (find all matches rather than stopping after the first match)</td>
+				</tr>
+				
+				<tr>
+					<td> m </td>
+					<td> Perform multiline matching </td>
+				</tr>
+			</table>
+		</span>
+		
+		<h2> Regular Expression Patterns </h2>
+		<span>
+			Brackets are used to find a range of characters:
+			
+			<table border="1" cellpadding="15px">
+				<tr> 
+					<td> <b>Expression</b> </td>
+					<td> <b>Description</b> </td>
+				</tr>
+				
+				<tr>
+					<td> [abc] </td>
+					<td> Find any of the characters between the brackets. </td>
+				</tr>
+				
+				<tr>
+					<td> [0-9] </td>
+					<td> Find any of the digits between the brackets. </td>
+				</tr>
+				
+				<tr>
+					<td> (x|y) </td>
+					<td> Find any of the alternatives separated with |. </td>
+				</tr>
+			</table><br>
+			
+			Metacharacters are characters with a special meaning:
+			<table border="1" cellpadding="15px">
+				<tr>
+					<td> <b>Metacharacter</b> </td>
+					<td> <b>Description</b> </td>
+				</tr>
+				
+				<tr>
+					<td> \d </td>
+					<td> Find a digit </td>
+				</tr>
+				
+				<tr>
+					<td> \s </td>
+					<td> Find a whitespace character </td>
+				</tr>
+				
+				<tr>
+					<td> \b </td>
+					<td> Find a match at the beginning of a word like this: \bWORD, or at the end of a word like this: WORD\b </td>
+				</tr>
+				
+				<tr>
+					<td> \uxxxx </td>
+					<td> Find the Unicode character specified by the hexadecimal number xxxx </td>
+				</tr>
+			</table><br>
+			
+			Quantifiers define quantities:
+			<table border="1" cellpadding="15px">
+				<tr>
+					<td> <b>Quantifier</b> </td>
+					<td> <b>Description</b> </td>
+				</tr>
+				
+				<tr>
+					<td> n+ </td>
+					<td> Matches any string that contains at least one n </td>
+				</tr>
+				
+				<tr>
+					<td> n* </td>
+					<td> Matches any string that contains zero or more occurrences of n </td>
+				</tr>
+			</table>
+		</span>
+		
+		<h2> Using the RegExp Object </h2>
+		<span>
+			In JavaScript, the RegExp object is a regular expression object with predefined properties and methods.
+			
+			<h3> Using test() </h3>
+			The test() method is a RegExp expression method. <br>
+			It searches a string for a pattern, and returns true or false, depending on the result.<br>
+			The following example searches a string for the character "e": <br>
+			
+			Example: <br>
+			<div style="width:420px;">
+				const pattern = /e/; <br>
+				pattern.test("The best things in life are free!");<br>
+			</div>
+			Since there is an "e" in the string, the output of the code above will be:<br>
+			true<br><br>
+			
+			You don't have to put the regular expression in a variable first. The two lines above can be shortened to one:<br>
+			/e/.test("The best things in life are free!");
+		</span>
+		
+		<h2> Using exec() </h2>
+		<span>
+			The exec() method is a RegExp expression method. <br>
+			It searches a string for a specified pattern, and returns the found text as an object. <br>
+			If no match is found, it returns an empty (null) object. <br>
+			The following example searches a string for the character "e": <br>
+			/e/.exec("The best things in life are free!");
+		</span><br>
+		
+		<h2> JavaScript </h2>
+		
+		<script>
+			var str = `Technology Masters was an educational arena. masters
+			Masters, masters`;
+			document.write(str + "<br>");
+			document.write("str.search(\"Masters\") : " + str.search("Masters") + "<br>");
+			document.write("str.search(/masters/i) : " + str.search(/masters/i) + "<br>");
+			document.write("str.replace(/masters/ig, \"wale\") : " + str.replace(/masters/ig, "wale") + "<br>");
+			document.write("str.replace(/masters/ig, \"wale\") : " + str.replace(/masters/im, "wale") + "<br>");
+			// It returns the index where the string is found.
+			
+			var str2 = "Chandigarh is called as City Beautiful. Chandigarh called as the Green City. Pincode of Chandigarh : 160014. Cchina";
+			document.write(str + "<br>");
+			document.write("str2.search(/[abc]/) : " + str2.search(/[abc]/) + "<br>");
+			document.write("str2.replace(/[a]/g, \"aa\") : " + str2.replace(/[a]/g, "aa") + "<br>");
+			document.write("str2.replace(/[0]/g, 1) : " + str2.replace(/[0]/g, 1) + "<br>");
+			document.write("str2.replace(/[i|a]/g, \"o\") : " + str2.replace(/[i|a]/g, "o") + "<br>");
+			// replace() method doesn't replace original string.
+			document.write("str2.replace(/\d/g, \"n\") : " + str2.replace(/\d/g, "n") + "<br>");
+			document.write("str2.replace(/\s/g, \"_\") : " + str2.replace(/\s/g, "_") + "<br>");
+			//document.write("str2.replace(/auti/, \"cauti\") : " + str2.replace(/\b auti/g, "cauti") + "<br>");
+			document.write("str2.replace(/n+/g, \"m\") : " + str2.replace(/n+/g, "m") + "<br>");
+			document.write("str2.replace(/n*/g, \"p\") : " + str2.replace(/n*/g, "p") + "<br>");
+		</script>
+	</body>
+</html>

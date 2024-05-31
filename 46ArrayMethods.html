@@ -1,0 +1,62 @@
+<html>
+<head> 
+	<title> Array </title> 
+</head>
+<script>
+	var arr = new Array(238 , 2 , 81 , 27 , 92 , 17 , 91 , 83);
+	var arr2 = arr.concat(27 , 81 , 28 , 91);
+	for(i = 0; i < arr2.length; i++)
+	{
+		document.write(arr2[i] + "<br>");
+	}
+	
+	var arr3 = new Array(89 , 72 , 83 , 28 , 52 , 82 , 33 , 16);
+	var arr4 = new Array(61 , 61 , 17 , 3 , 9 , 712 , 8);
+	var arr5 = arr3.concat(arr4);
+	for(i = 0; i < arr5.length; i++)
+	{
+		document.write("<br>" + arr5[i]);
+	}
+	document.write("<br><br>");
+	var arr6 = new Array(71 , 63 , 61 , 8);
+	var marr6 = arr6.join(";");							/* join method is used to change and print the separator type between array elements ";" is the separator in this array. */
+	var rarr6 = arr6.reverse();
+	document.write(marr6 + "<br>");
+	document.write("Reversed array : " + rarr6 + "<br>");
+	arr6.sort();
+	document.write("Sorted array : " + arr6 + "<br>");
+	document.write("Array6.length : " + arr6.length + "<br>");
+	
+	var arr7 = new Array(81 , 16 , 26 , 188 , 44 , 3 , 8 , 6);
+	arr7.splice(4 , 3 , "rat" , "cat" );	//splice method can remove and/or add elements in array/from array here "5" is used to define the index of arr7, "2" is the values to delete from arr7, "rat","cat"	are the values to insert in the array. 					
+	document.write(arr7 + "<br>");
+	
+	var jarr7 = arr7.join(" ");
+	document.write(jarr7 + "<br>");
+	
+	var arr8 = new Array(81 , 74 , 6 , 28 , 22 , 2);
+	document.write("arr8.slice(2, 5) : " + arr8.slice(2 , 5) + "<br>");	// Slice method removes the elements between the specified indexes.
+	document.write(arr8.slice(-5, -1) + "<br>");		// If we have to give greater value in first position then we use (-) sign.
+
+	// splice() method
+	// Splice method removes the element from specified index. Here it will remove the elements from index 1 to 2 and return the left elements.
+	// Syntax : array_name.splice(start_index, number_of_elements, elements_to_insert);
+	var arr9 = ["Aryan", "Ajay", "Anuragh", "Ankur", "Amrit"];
+	arr9.splice(1, 2);
+	document.write("arr9.splice(1, 2) = " + arr9 + "<br>");		
+	
+	var arr10 = ["Aryan", "Ajay", "Anuragh", "Ankur", "Amrit"];
+	arr10.splice(2, 2, 'r');
+	document.write("arr10.splice(2, 2) = " + arr10 + "<br>");	// Here splice method would remove the element from index 2 and it will remove 2 elements as specified. The output will be different if we write arr10.splice(2, 2) outside the document.write() and inside.
+
+	var arr11 = ["Aryan", "Ajay", "Anuragh", "Ankur", "Amrit"];
+	arr11.splice(2, 3, "Adam");
+	document.write("arr11.splice(2, 3, 'Adam') = " + arr11 + "<br>"); // Here will start from index 2 and would delete 0 element and will insert - before index 2.
+	
+	// include() method : This method is used to check that a value exists in the array or not. It is case sensitive
+	document.write("arr11.includes(\"Ajay\") : " + arr11.includes("Ajay") + "<br>");
+</script>
+	<body>
+		
+	</body>
+</html>

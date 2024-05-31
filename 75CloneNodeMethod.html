@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Clone node method </title>
+	</head>
+	<body>
+		<h1> Clone node method </h1>
+		<hr>
+		
+		<p>
+			Clone node method is used to copy a node into a variable.<br>
+			Syntax :- target.cloneNode(boolean);<br>
+			When the argument is false then the text is not copied, otherwise the text is copied.
+		</p>
+		
+		Mobile Companies :
+		<ul>
+			<li> Redmi </li>
+			<li> Samsung </li>
+			<li> Nokia </li>
+			<li> Poco </li>
+			<li> Realme </li>
+			<li> Vivo </li>
+		</ul>
+		
+		<div id="d1"></div>
+		
+		<script>
+			var target = document.querySelector("ul").children[0];
+			var copyE = target.cloneNode(true);
+			console.log(copyE);
+			
+			document.querySelector("#d1").appendChild(copyE);
+		</script>
+	</body>
+</html>

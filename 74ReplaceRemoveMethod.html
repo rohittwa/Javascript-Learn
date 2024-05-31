@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Replace, Remove methods</title>
+	</head>
+	<body>
+		<h1> Replace, Remove methods </h1>
+		<hr>
+		
+		<ol>
+			<li> <b>replaceChild(newElement, oldElement) : Used to replace an element with another.</b> </li>
+			<li> <b>removeChild() : </b> Used to remove an element.</li>
+		</ol>
+		
+		Fruits:
+		<ul id="list">
+			<li> Grapes </li>
+			<li> Lychee </li>
+			<li> Pineapple </li>
+			<li> Sugarcane </li>
+		</ul>
+		
+		<script>
+			var newElement = document.createElement("li");
+			var newText = document.createTextNode("Guava");
+			newElement.appendChild(newText);
+			var target = document.querySelector("#list");
+			target.replaceChild(newElement, target.children[1]);
+			target.removeChild(target.children[0]);
+		</script>
+	</body>
+</html>

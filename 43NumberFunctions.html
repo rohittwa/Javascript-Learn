@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Number Functions</title>
+	</head>
+	<body>
+		<h1>Number Functions</h1>
+		<hr>
+	
+		<script>
+			// Converting variables to numbers.
+			// There are 3 JavaScript functions that can be used to convert variables to numbers:
+			// 1. The Number() function : Returns a number, converted from its argument.
+			// 2. The parseInt() function : Parses its argument and returns a floating point number.
+			// 3. The parseFloat() function : Parses its argument and returns an integer.
+			// These functions are not number functions, but global JavaScript functions.
+			// JavaScript global functions can be used on all JavaScript data types.
+			// These are the most relevant functions, when working with numbers.
+			
+			// Number() function
+			// Number() can be used to convert JavaScript variables to numbers.
+			var n1 = "346";
+			document.write("Number(n3) + 1 : " + (Number(n1)+1) + "<br>");
+			// If the number cannot be converted, NaN (Not a Number) is returned.
+			
+			document.write("<br>");
+			
+			// parseInt() function
+			// parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned.
+			var n2 = "1945";
+			var n3 = "1945.430";		// By converting it to number by using parseInt() function the decimal part will be ignored.
+			var n4 = "38 13";
+			document.write("parseInt(n2)+1 : " + (parseInt(n2)+1) + "<br>");
+			document.write("parseInt(n3)+1 : " + (parseInt(n3)+1) + "<br>");
+			document.write("parseInt(n4)+1 : " + (parseInt(n4)+1) + "<br>");
+			
+			document.write("<br>");
+			
+			// parseFloat() function
+			// parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned.
+			var n5 = "392.2014";
+			var n6 = "1945.430";		// By converting it to number by using parseInt() function the decimal part will be ignored.
+			var n7 = "38.4 13.1";
+			var n8 = "day 8";
+			document.write("parseFloat(n5)+1 : " + (parseFloat(n5)+1) + "<br>");
+			document.write("parseFloat(n6)+1 : " + (parseFloat(n6)+1) + "<br>");
+			document.write("parseFloat(n7)+1 : " + (parseFloat(n7)+1) + "<br>");
+			document.write("parseFloat(n8)+1 : " + (parseFloat(n8)+1) + "<br>");
+			
+			var n9 = 8;
+			document.write("isNaN(n9) : " + isNaN(n9) + "<br>");
+			// isNaN returns true if the argument is NaN.
+		</script>
+	</body>
+</html>

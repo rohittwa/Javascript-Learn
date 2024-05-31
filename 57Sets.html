@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sets</title>
+	</head>
+	<style>
+		p, table tr td{
+			font-size:14pt; font-family:arial;
+		}
+	</style>
+	<body>
+		<h1>Sets</h1>
+		<hr>
+		
+		<p>
+			A JavaScript Set is a collection of unique values. <br>
+			Each value can only occur once in a Set.
+		</p>
+		
+		<h3> Essential Set Methods </h3>
+		<table border="1" cellpadding="15">
+			<tr>
+				<td> <b>Method</b> </td>
+				<td> <b>Description</b> </td>
+			</tr>
+			
+			<tr>
+				<td> new Set() </td>
+				<td> Creates a new Set </td>
+			</tr>
+			
+			<tr>
+				<td> add() </td>
+				<td> Adds a new element to the Set </td>
+			</tr>
+			
+			<tr>
+				<td> delete() </td>
+				<td> Removes an element from a Set </td>
+			</tr>
+			
+			<tr>
+				<td> has() </td>
+				<td> Returns true if a value exists in the Set </td>
+			</tr>
+			
+			<tr>
+				<td> forEach() </td>
+				<td> Invokes a callback for each element in the Set </td>
+			</tr>
+			
+			<tr>
+				<td> values() </td>
+				<td> Returns an iterator with all the values in a Set </td>
+			</tr>
+		</table>
+		
+		<br>
+		<table border="1" cellpadding="15">
+			<tr>
+				<td> <b>Property</b> </td>
+				<td> <b>Description</b> </td>
+			</tr>
+			
+			<tr>
+				<td> size </td>
+				<td> Returns the number of elements in a Set </td>
+			</tr>
+		</table>
+		
+		<h2>JavaScript</h2>
+		
+		<script>
+			var vowels = new Set(["a", "e", "i"]);
+			vowels.add("o");
+			vowels.add("u");
+			
+			document.write("vowels.has(\"o\") : " + vowels.has("o") + "<br>");
+			
+			for(var e of vowels){
+				document.write(e + "<br>");
+			}
+			
+			let text = "";
+			vowels.forEach (function(value) {
+				text += value;
+			});
+			document.write(text + "<br>");
+			
+			for(var e of vowels.values()){
+				document.write(e + "<br>");
+			}
+			
+			document.write("Size of vowels : " + vowels.size + "<br>");
+		</script>
+	</body>
+</html>

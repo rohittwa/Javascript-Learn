@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Array methods </title>
+</head>
+<body>
+	<script>
+		var arr = [5, 0, 12, 53, 29, 7, 36, 19];
+		document.write("arr = " + arr + "<br>");
+		document.write("arr.length = " + arr.length + "<br>");
+		
+		document.write("arr.concat(8, 9, 2) = " + arr.concat(8, 9, 2) + "<br>");
+		// concat() method inserts new elements in the array at the last position and returns the new array.
+		
+		document.write("arr.join(' ')+4 = " + (arr.join(' ')+4) + "<br>");
+		// join method is used to separate the array elements with the given separator and it returns the array in the form of string.
+		
+		document.write("arr.pop() = " + arr.pop() + "<br>");
+		// pop method is used to remove last element from the array and it returns the removed element.
+		
+		document.write("arr.push('fdi') = " + arr.push('fdi') + "<br>");
+		// push() method is used to insert one element in the array at the last position and it returns the index of the new element.
+		
+		document.write("arr.slice(2, 6) = " + arr.slice(2, 6) + "<br>");
+		
+		arr.splice(1, 4, '*');
+		document.write("arr.splice(1, 4, '*') = " + arr + "<br>");
+		
+		arr.shift();
+		document.write("arr after shifting : " + arr + "<br>");
+		// shift() method removes the first element from the array and returns the removed element.
+		
+		arr.unshift(14);
+		document.write("arr after unshifting : " + arr + "<br>");
+		// unshift() method inserts a new element in the array at the first position and returns the new arrays's length.
+		
+		delete arr[3];
+		document.write("arr after deleting element from 3 index : " + arr + "<br>");
+		// delete keyword removes the value from a specified index but it does not remove the index.
+		
+		var arr2 = ["Rohit", "Amrit", "Chahal", "Virat", "Prithvi"];
+		arr2.sort();
+		document.write("arr2 after sorting : " + arr2 + "<br>");
+		// sort method sorts the array in alphabetical order.
+		
+		// Sorting numeric array in ascending order;
+		var arr3  = [24, 9, 10, 256, 15, 5, -4];
+		arr3.sort(function(a, b){return a-b;});
+		document.write("arr3 after sorting in ascending order: " + arr3 + "<br>");
+		
+		// Sorting numeric array in descending order;
+		var arr3  = [24, 9, 10, 256, 15, 5, -4];
+		arr3.sort(function(a, b){return b-a;});
+		document.write("arr3 after sorting in descending order : " + arr3 + "<br>");
+		
+		arr2.reverse();
+		document.write("arr2 after reversing : " + arr2 + "<br>");
+		
+		document.write("arr3.indexOf(10) : " + arr3.indexOf(24) + "<br>");
+		
+		// toString() method makes an array a string with commas.
+		arr3.toString();
+		document.write("arr3+1 : " + (arr3+1) + "<br>");
+		
+		// fill() method : This method is used to fill all the values of an array with a specified value.
+		arr2.fill("Ram");
+		document.write("arr2 : " + arr2);
+
+		/* 
+			map() method: map() creates a new array from calling a function for every array element.
+			map() does not execute the function for empty elements.
+			map() does not change the original array.
+		*/
+		const numbers = [38, 39, 21, 49, 3];
+		const newArr = numbers.map(Math.sqrt);
+		document.write("<br>newArr = " + newArr);
+
+		const persons = [
+			{firstname : "Malcom", lastname: "Reynolds"},
+			{firstname : "Kaylee", lastname: "Frye"},
+			{firstname : "Jayne", lastname: "Cobb"}
+		];
+		function getFullName(item) {
+			return [item.firstname,item.lastname].join(" ");
+		}
+		var p = persons.map(getFullName);
+		document.write("<br>persons = " + p);
+
+		/*
+			The filter() method creates a new array filled with elements that pass a test provided by a function.
+			The filter() method does not execute the function for empty elements.
+			The filter() method does not change the original array.
+		*/
+		const ages = [32, 33, 16, 40];
+		const result = ages.filter(checkAdult);
+		function checkAdult(age) {
+			return age >= 18;
+		}
+		document.write("<br>result = " + result);
+
+		/*
+			The reduce() method executes a reducer function for array element.
+			The reduce() method returns a single value: the function's accumulated result.
+			The reduce() method does not execute the function for empty array elements.
+			The reduce() method does not change the original array.
+		*/
+		const nums = [175, 50, 25];
+		var reduce = nums.reduce(myFunc);
+		function myFunc(total, num) {
+		return total - num;
+		}
+		document.write("<br>reduce = " + reduce);
+
+		/*
+			The find() method returns the value of the first element that passes a test.
+			The find() method executes a function for each array element.
+			The find() method returns undefined if no elements are found.
+			The find() method does not execute the function for empty elements.
+			The find() method does not change the original array.
+		*/
+		const agess = [3, 10, 18, 20, 28];
+		var find = agess.find(checkAge);
+		function checkAge(age) {
+			return age > 18;
+		}
+		document.write("<br>find = " + find);
+
+		/*
+			The findIndex() method executes a function for each array element.
+			The findIndex() method returns the index (position) of the first element that passes a test.
+			The findIndex() method returns -1 if no match is found.
+			The findIndex() method does not execute the function for empty array elements.
+			The findIndex() method does not change the original array.
+		*/
+		const ages2 = [3, 10, 18, 20, 28];
+		var findIndex = ages2.findIndex(checkAge);
+		function checkAge(age) {
+			return age > 18;
+		}
+		document.write("<br>findIndex = " + findIndex);
+	</script>
+</body>
+</html>

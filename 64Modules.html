@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Modules </title>
+		<style>
+			body{
+				font-family:arial; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Modules </h1>
+		<hr>
+		
+		<p>
+			JavaScript modules allow you to break up your code into separate files. <br>
+			This makes it easier to maintain the code-base. <br>
+			JavaScript modules rely on the import and export statements. <br>
+		</p>
+		
+		<h2> Export </h2>
+		<span>
+			You can export a function or variable from any file. <br>
+			Let us create a file named person.js, and fill it with the things we want to export. <br>
+			There are two types of exports: Named and Default.<br><br>
+			
+			The export declaration is used when creating JavaScript modules to export live bindings to functions, objects, or primitive values from the module so they can be used by other programs with the import declaration. The value of an imported binding is subject to change in the module that exports it.
+		</span>
+		
+		<h3> Named Exports </h3>
+		<span>
+			You can create named exports two ways. In-line individually, or all at once at the bottom.<br><br>
+			
+			In-line individually:<br>
+			<div style="background-color:yellow; width:220px;">
+				export const name = "Jesse"; <br>
+				export const age = 40;
+			</div><br>
+			
+			All at once at the bottom:<br>
+			<div style="background-color:yellow; width:200px;">
+				const name = "Jesse";<br>
+				const age = 40;<br><br>
+
+				export {name, age};<br>
+			</div>
+		</span>
+		
+		<h2> Import </h2>
+		<span>
+			You can import modules into a file in two ways, based on if they are named exports or default exports.<br>
+			Named exports are constructed using curly braces. Default exports are not. <br>
+			
+			Import from named exports<br>
+			Import named exports from the file person.js:<br>
+			<div style="background-color:yellow; width:340px;">
+				import { name, age } from "./person.js";
+			</div>
+		</span>
+		
+		<p>
+			To use a module in html we can use the module value in type attribute and give the path of the module in src attribute:<br>
+			Example : &lt;script type="module" src="./File2.js"&gt;&lt;/script&gt;<br>
+			&lt;script type="module" src="./E:/File2.js"&gt;&lt;/script&gt;
+		</p>
+		<script>
+			import {month} from "./E:\Javascript projects\CalenderJs.js";
+			
+			document.write("Month = " + month);
+			//document.write("Year = " + cYear);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Array with const keyword</title>
+	</head>
+	<body>
+		<h1>Array with const keyword</h1>
+		<hr>
+		
+		<p style = "font-family:arial; font-size:15pt;">
+			The keyword const is a little misleading.<br>
+			It does NOT define a constant array. It defines a constant reference to an array.<br>
+			Because of this, we can still change the elements of a constant array.<br>
+			An array declared with const has Block Scope. <br>
+		</p>
+		
+		<div style="font-family:arial; font-size:14pt; background-color:#f9ff09b5; width:350px;">
+			var cars = ["Volvo", "BMW"];	// Allowed <br>
+			var cars = ["Toyota", "BMW"];	// Allowed<br>
+			cars = ["Volvo", "Saab"];      // Allowed<br>
+		</div>
+		
+		<script>
+			const arr1 = ["a", "b", "c", "d"];
+			arr1[0] = "e";
+			document.write(arr1 + "<br>");
+			// An array declared with const has Block Scope.
+		</script>
+	</body>
+</html>

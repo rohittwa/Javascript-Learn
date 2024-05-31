@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maps</title>
+		<style>
+			table tr td, p, ul li{
+				font-size:14pt; font-family:arial;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Maps</h1>
+		<hr>
+		
+		<p>
+			A Map holds key-value pairs where the keys can be of any datatype. <br>
+			A Map remembers the original insertion order of the keys.
+		</p>
+		
+		<h2>Essential map methods</h2>
+		
+		<table border="1" cellpadding="15">
+			<tr>
+				<td> <b>Method</b> </td>
+				<td> <b>Description</b> </td>
+			</tr>
+			
+			<tr>
+				<td> new map() </td>
+				<td> Creates a new Map </td>
+			</tr>
+			
+			<tr>
+				<td> set() </td>
+				<td> Sets the key and value in a Map </td>
+			</tr>
+			
+			<tr>
+				<td> get() </td>
+				<td> Gets the value for a key in a Map </td>
+			</tr>
+			
+			<tr>
+				<td> delete() </td>
+				<td> Removes a Map element specified by the key </td>
+			</tr>
+			
+			<tr>
+				<td> has() </td>
+				<td> Returns true if a key exists in a Map </td>
+			</tr>
+			
+			<tr>
+				<td> forEach() </td>
+				<td> Calls a function for each key/value pair in a Map </td>
+			</tr>
+			
+			<tr>
+				<td> entries() </td>
+				<td> Returns an iterator with the [key, value] pairs in a Map </td>
+			</tr>
+		</table><br>
+		
+		<table border="1" cellpadding="15">
+			<tr>
+				<td> <b>Property</b> </td>
+				<td> <b>Description</b> </td>
+			</tr>
+			
+			<tr>
+				<td> size </td>
+				<td> Returns the number of elements in a Map </td>
+			</tr>
+		</table>
+		
+		<h2> How to Create a Map </h2>
+		<p>
+			You can create a JavaScript Map by:
+			<ul>
+				<li> Passing an array to new Map() </li>
+				<li> Create a Map and use Map.set() </li>
+			</ul>
+		</p>
+		
+		<h2> JavaScript Objects vs Maps </h2>
+		<table border="1" cellpadding="15">
+			<tr>
+				<td></td>
+				<td> <b>Object</b> </td>
+				<td> <b>Map</b> </td>
+			</tr>
+			
+			<tr>
+				<td> 1. </td>
+				<td> Not directly iterable </td>
+				<td> Directly iterable </td>
+			</tr>
+			
+			<tr>
+				<td> 2. </td>
+				<td> Do not have a size property </td>
+				<td> Have a size property </td>
+			</tr>
+			
+			<tr>
+				<td> 3. </td>
+				<td> Keys must be strings or symbols </td>
+				<td> Keys can be of any datatype </td>
+			</tr>
+			
+			<tr>
+				<td> 4. </td>
+				<td> Keys are not well ordered </td>
+				<td> Keys are ordered by insertion </td>
+			</tr>
+			
+			<tr>
+				<td> 5. </td>
+				<td> Have default keys </td>
+				<td> Do not have default keys </td>
+			</tr>
+		</table>
+		
+		<script>
+			var fruits = new Map();
+			fruits.set("apple", 100);
+			fruits.set("mango", 110);
+			fruits.set("banana", 130);
+			fruits.set("sugarcane", 120);
+			
+			for(var f of fruits){
+				document.write(f + "<br>");
+			}
+			
+			document.write("fruits.size : " + fruits.size + "<br>");
+			
+			fruits.delete("sugarcane");
+			
+			for(var f of fruits){
+				document.write(f + "<br>");
+			}
+			
+			document.write("fruits.has(\"mango\") : " + fruits.has("mango") + "<br>");
+			
+			document.write("<br>");
+			for(var v of fruits.entries()){
+				document.write(v + "<br>");
+			}
+			
+		</script>
+	</body>
+</html>

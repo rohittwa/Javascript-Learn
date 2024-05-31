@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DOM targetting methods </title>
+		<style>
+			div{
+				font-family:arial; font-size:15pt; color:#5d2eb1;
+			}
+			span{
+				font-family:arial; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="h1"> DOM targetting methods </h1>
+		<hr>
+		
+		<div> Q1. What is DOM? </div>
+		<span>
+			Ans: The Document Object Model is an Application Programming Interface (API) that allows scripting languages to access the content, style and structure of the web pages and change them.
+		</span> <br><br>
+		
+		<div> Q2. How to target DOM objects? </div>
+		<span>
+			Ans: <ul>
+				<li> <b>id:</b> document.getElementById(id) </li>
+				<li> <b>class:</b> document.getElementsByClassName(class_name) </li>
+				<li> <b>Tag name:</b> document.getElementsByTagName(tag_name) </li>
+				<li> <b> All : </b> document.querySelector() </li>
+				<li> <b> All : </b> document.querySelectorAll() </li>
+			</ul>
+		</span>
+		
+		<script>
+			console.log(document);			// It gives all the document.
+			console.log(document.all);		// It gives the array of all the tags.
+			console.log(document.head);
+			console.log(document.title);
+			console.log(document.head.style);
+			console.log(document.body);
+			console.log(document.body.h1);		// We cann't access the inner tags like this.
+			console.log(document.baseURI);
+			
+			var h1 = document.getElementById("h1").textContent;
+			document.write(h1 + "<br>");
+			
+			document.write(document.querySelector("#h1").getAttribute("id"));
+			document.querySelectorAll("div")[0].innerHTML += "Hello";
+			document.querySelectorAll("div")[1].innerHTML += "Hello";
+			
+			console.log(document.querySelectorAll("div")[1]);
+			// We can select only one element from all the accessed elements with querySelectorAll() method.
+            console.log(document.getElementsByTagName("div")[0]);
+			document.getElementsByTagName("div")[0].innerHTML += "Hii";
+		</script>
+	</body>
+</html>

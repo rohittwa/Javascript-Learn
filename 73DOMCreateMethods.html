@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DOM Create methods </title>
+		<style>
+			h1, h2{
+				font-family:arial;
+			}
+		
+			li{
+				font-family:tahoma; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> DOM Create methods </h1>
+		<hr>
+		
+		<ol>
+			<li> createElement() : Used to create a Tag in HTML by using Javascript. </li>
+			<li> createText() : Used to write a Text in HTML by using Javascript. </li>
+			<li> createComment() : Used to write a Comment in HTML by using Javascript. </li>
+			<li> createDocumentFragment() : 
+				<ul>
+					<li> The document fragment interface represents a minimal document object that has no parent. </li>
+					<li> A common use for document fragment is to create one, assemble a DOM subtree within it, then append or insert the fragment into the DOM using Node interface methods such as append child() or insertBefore().</li>
+					<li> Document fragment isn't the part of the tree structure, changes made to the fragment don't affect the document. </li>
+					<li> Doing this moves the fragment's nodes into the DOM, leaving behind an empty document fragment. </li>
+					<li> An empty document fragment can be created using the <br>
+					document.createDocumentFragment() method.</li>
+				</ul>
+			</li>
+		</ol>
+		
+		<h2> Methods to insert a text in a tag. </h2>
+		<ol>
+			<li> <b>appendChild(child_name) :</b> It appends the text etc. inside the end of the tag.</li>
+			<li> <b>insertBefore(child_name, target) :</b> It inserts the text etc. before a specified tag.</li>
+			
+			<li> 
+				<b>insertAdjacentElement(position, element_name) :</b> Used to create and insert a tag somewhere in the body.<br>
+				
+				Properties in this method :-
+				<ul>
+					<li> beforeBegin : Inserts the element before the tag.</li>
+					<li> afterBegin : Inserts the element after start of the tag.</li>
+					<li> beforeEnd : Inserts the element before end of the tag.</li>
+					<li> afterEnd : Inserts the element after end of the tag.</li>
+				</ul>
+			</li>
+			
+			<li> 
+				<b>insertAdjacentHTML :</b> Used to create a tag and text and insert it somewhere in the body<br>
+				
+				Properties in this method :-
+				<ul>
+					<li> beforeBegin : Inserts the element before the tag.</li>
+					<li> afterBegin : Inserts the element after start of the tag.</li>
+					<li> beforeEnd : Inserts the element before end of the tag.</li>
+					<li> afterEnd : Inserts the element after end of the tag.</li>
+				</ul>
+			</li>
+			
+			<li> 
+				<b>insertAdjacentText :</b> Used to create a text and insert it somewhere in the body. <br>
+				
+				Properties in this method :-
+				<ul>
+					<li> beforeBegin : Inserts the element before the tag.</li>
+					<li> afterBegin : Inserts the element after start of the tag.</li>
+					<li> beforeEnd : Inserts the element before end of the tag.</li>
+					<li> afterEnd : Inserts the element after end of the tag.</li>
+				</ul>
+			</li>
+		</ol>
+		
+		<h2 id="h2_2">
+			<span> This is text 1. </span>
+		</h2>
+		
+		<script>
+			var newElement = document.createElement("p");
+			console.log(newElement);
+			
+			var newText = document.createTextNode("This is a text.");
+			console.log(newText);
+			
+			var newComment = document.createComment("This is a comment.");
+			console.log(newComment);
+			
+			console.log(newElement.appendChild(newText));
+			
+			document.querySelector("#h2_2").appendChild(newElement);
+			var target = document.querySelector("#h2_2");
+			target.insertBefore(newComment, target.childNodes[0]);
+			
+			var text = "This text is inserted using insertAdjacentText() method."
+			target.insertAdjacentText("beforeBegin", text);
+		</script>
+	</body>
+</html>

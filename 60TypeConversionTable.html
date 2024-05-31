@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Type conversion table </title>
+		<style>
+			td{
+				font-size:14pt; font-family:arial; text-align:center;
+			}
+			
+			table{
+				border-color:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Type conversion table </h1>
+		<hr>
+		
+		<table border="1" cellpadding="15">
+			<tr>
+				<td> <b>Original value</b> </td>
+				<td> <b>Converted to number</b> </td>
+				<td> <b>Converted to string</b> </td>
+				<td> <b>Converted to boolean</b> </td>
+			</tr>
+			
+			<tr>
+				<td> false </td>
+				<td> 0 </td>
+				<td> "false" </td>
+				<td> false </td>
+			</tr>
+			
+			<tr>
+				<td> true </td>
+				<td> 1 </td>
+				<td> "true" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> 0 </td>
+				<td> 0 </td>
+				<td> "0" </td>
+				<td> false </td>
+			</tr>
+			
+			<tr>
+				<td> 1 </td>
+				<td> 1 </td>
+				<td> "1" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> "0" </td>
+				<td> 0 </td>
+				<td> "0" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> "000" </td>
+				<td> 0 </td>
+				<td> "000" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> "1" </td>
+				<td> 1 </td>
+				<td> "1" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> NaN </td>
+				<td> NaN </td>
+				<td> "NaN" </td>
+				<td> false </td>
+			</tr>
+			
+			<tr>
+				<td> Infinity </td>
+				<td> Infinity </td>
+				<td> "Infinity" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> -Infinity </td>
+				<td> -Infinity </td>
+				<td> "-Infinity" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> "" </td>
+				<td> 0 </td>
+				<td> "" </td>
+				<td> false </td>
+			</tr>
+			
+			<tr>
+				<td> "20" </td>
+				<td> 20 </td>
+				<td> "20" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> "twenty" </td>
+				<td> NaN </td>
+				<td> "twenty" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> [] </td>
+				<td> 0 </td>
+				<td> "" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> [20] </td>
+				<td> 20 </td>
+				<td> "20" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> [10, 20] </td>
+				<td> NaN </td>
+				<td> "10, 20" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> ["twenty"] </td>
+				<td> NaN </td>
+				<td> "twenty" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> ["ten", "twenty"] </td>
+				<td> NaN </td>
+				<td> "ten twenty" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> function(){} </td>
+				<td> NaN </td>
+				<td> "function(){}" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> {} </td>
+				<td> NaN </td>
+				<td> "[object Object]" </td>
+				<td> true </td>
+			</tr>
+			
+			<tr>
+				<td> null </td>
+				<td> 0 </td>
+				<td> "null" </td>
+				<td> false </td>
+			</tr>
+			
+			<tr>
+				<td> undefined </td>
+				<td> NaN </td>
+				<td> "undefined" </td>
+				<td> false </td>
+			</tr>
+		</table>
+	</body>
+</html>

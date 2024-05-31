@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DOM get set value methods </title>
+		<style>
+			div{
+				font-family:arial; font-size:15pt; color:#5d2eb1;
+			}
+			span{
+				font-family:arial; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> DOM get set value methods </h1>
+		<hr>
+		
+		<div id="div1"> Q. What we can get with DOM? </div>
+		<span id="span1" style="color:blue;">
+			Ans: <ul>
+				<li> HTML </li>
+				<li> Text </li>
+				<li> Attribute </li>
+			</ul>
+		</span><br><br>
+		
+		<div> Q. DOM get methods? </div>
+		<span>
+			Ans: <ul>
+				<li> innerText: gives all the text. </li>
+				<li> innerHTML : gives all the HTML tags and their text inside the element </li>
+				<li> value : gives the value of a text box </li>
+				<li> textContent : gives the text of the element.</li>
+				<li> getAttribute : gets the attribute name.</li>
+				<li> getAttributeNode : get the attribute name and value.</li>
+				<li> attributes : gets all the attibutes in an element.</li>
+			</ul>
+		</span><br><br>
+		
+		<div> Q. DOM set methods? </div>
+		<span id="span2">
+			Ans: <ul>
+				<li> innerText: sets all the text. </li>
+				<li> innerHTML : sets all the HTML tags and their text inside the element </li>
+				<li> value : sets the value of a text box </li>
+				<li> textContent : sets the text of the element.</li>
+				<li> setAttribute(attributes_name, value) </li>
+				<li> removeAttribute </li>
+			</ul>
+		</span>
+		
+		<script>
+			document.write(document.getElementById("div1").innerHTML + "<br>");
+			document.write(document.getElementById("span1").innerHTML + "<br>");
+			document.write(document.getElementById("span1").innerText + "<br>");
+			document.write(document.getElementById("span1").textContent + "<br>");
+			document.write(document.getElementById("span1").value + "<br>");
+			document.write(document.getElementById("span1").getAttribute("id") + "<br>");
+			document.write(document.getElementById("span1").getAttributeNode("style") + "<br>");
+			document.write(document.getElementById("span1").getAttributeNode("style").value + "<br>");
+			console.log(document.getElementById("span1").attributes);
+			console.log(document.getElementById("span1").attributes[1]);
+			console.log(document.getElementById("span1").attributes[1].name);
+			console.log(document.getElementById("span1").attributes[1].value);
+			
+			document.getElementById("span2").setAttribute("style", "color:blue;");
+			document.getElementById("span2").removeAttribute("id");
+		</script>
+	</body>
+</html>

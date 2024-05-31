@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Type conversion</title>
+		<style>
+			li, span{
+				font-size:14pt; font-family:arial;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Type conversion</h1>
+		<hr>
+		
+		<h2> Javascript type conversion </h2>
+		<ol>
+			<li> Converting Strings to Numbers </li>
+			<li> Converting Numbers to Strings </li>
+			<li> Converting Dates to Numbers </li>
+			<li> Converting Numbers to Dates </li>
+			<li> Converting Booleans to Numbers </li>
+			<li> Converting Numbers to Booleans </li>
+		</ol>
+		
+		<span> JavaScript variables can be converted to a new variable and another data type: </span>
+		<ul>
+			<li> By the use of a JavaScript function </li>
+			<li> Automatically by JavaScript itself </li>
+		</ul>
+		
+		<script>
+			/* Converting Strings to Numbers
+			The global method Number() can convert strings to numbers.
+			Strings containing numbers (like "3.14") convert to numbers (like 3.14).
+			Empty strings convert to 0.
+			Anything else converts to NaN (Not a Number).
+			
+			Number methods :
+			---------------------------------------------------------------------------------
+			|	Method			|		Description											|
+			|-------------------|------------------------------------------------------------
+			|Number()			|	Returns a number, converted from its argument.			|
+			|parseFloat()		|	Parses a string and returns a floating point number.	|
+			|parseInt()			|	Parses a string and returns an integer.					|
+			---------------------------------------------------------------------------------
+			The Unary + Operator
+			The unary + operator can be used to convert a variable to a number:
+			If the variable cannot be converted, it will still become a number, but with the value NaN (Not a Number).
+			*/
+			
+			var a = "5";
+			var b = +a;
+			document.write("b+1 : " + (b+1) + "<br>");
+			
+			var c = Number(a);
+			document.write("c+1 : " + (c+1) + "<br>");
+			
+			var d = parseFloat(a);
+			document.write("d+1 : " + (d+1) + "<br>");
+			
+			var e = parseInt(a);
+			document.write("e+1 : " + (e+1) + "<br>");
+			document.write("<br>");
+			
+			/*
+			Converting Numbers to string.
+			
+			String methods :
+			-----------------------------------------------------------------------------------------------
+			|	Method			|		Description														  |		
+			|-------------------|--------------------------------------------------------------------------
+			|String()			|	The global method String() can convert numbers to strings.			  |
+			|toString()			|	Converts a number to string.										  |
+			|toExponential()	|	Returns a string, with a number rounded and written using exponential |	|					|	notation.															  |
+			|toFixed()			|	Returns a string, with a number rounded and written with a specified  |
+			|					|	number of decimals.													  |
+			|toPrecision()		|	Returns a string, with a number written with a specified length.	  |
+			----------------------------------------------------------------------------------------------
+			*/
+			
+			var n = 839;
+			document.write("String(n)+3 : " + (String(n)+3) + "<br>"); 
+			document.write("n.toString()+1 : " + (n.toString()+1) + "<br>");
+			document.write("n.toExponential()+1 : " + (n.toExponential()+1) + "<br>");
+			document.write("n.toFixed(2)+1 : " + (n.toFixed(2)+1) + "<br>");
+			document.write("n.toPrecision(2)+1 : " + (n.toPrecision(2)+1) + "<br>");
+			
+			
+			/*
+			Converting Dates to Numbers.
+			The global method Number() can be used to convert dates to numbers.
+			The date method getTime() does the same.
+			*/
+			var d = new Date();
+			document.write("Number(d)+1 : " + (Number(d)+1) + "<br>");
+			document.write("d.getHours()+1 : " + (d.getHours()+1) + "<br>");
+			
+			/*
+			Converting Dates to Strings.
+			The global method String() can convert dates to strings.
+			The Date method toString() does the same.
+			We can convert all the date and time to string.
+			*/
+			document.write("String(d)+1 : " + (String(d)+1) + "<br>");
+			
+			
+			/*
+			Converting Booleans to Numbers
+			The global method Number() can also convert booleans to numbers.
+			*/
+			var bool = true;
+			document.write("Number(bool) : " + Number(bool) + "<br>");
+			
+			/*
+			Converting Booleans to Strings
+			The global method String() can convert booleans to strings.
+			The Boolean method toString() does the same.
+			*/
+			document.write("String(bool)+1 : " + (String(bool)+1) + "<br>");
+			document.write("bool.toString()+1 : " + (bool.toString()+1) + "<br>");
+			
+			/*
+			Automatic Type Conversion
+			When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.
+			The result is not always what you expect:
+			
+			5 + null    // returns 5         because null is converted to 0
+			"5" + null  // returns "5null"   because null is converted to "null"
+			"5" + 2     // returns "52"      because 2 is converted to "2"
+			"5" - 2     // returns 3         because "5" is converted to 5
+			"5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
+			*/
+		</script>
+	</body>
+</html>

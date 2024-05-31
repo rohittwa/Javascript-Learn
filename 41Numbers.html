@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numbers</title>
+		<body>
+			<script>
+				var a = 123e5;
+				var b = 123e-5;
+				document.write(a + "<br>");
+				document.write(b + "<br>");
+				
+				// The maximum number of decimals is 17.
+				
+				// NaN : Not a Number is a javascript reserved word indicating that a number is not legal.
+				// Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number).
+				var c = 5/'a';
+				document.write(c + "<br>");
+				document.write("typeof(c) : " + typeof(c) + "<br>");
+				
+				// Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+				var i = 0;
+				//while(i != Infinity){
+				//	document.write(i);
+				//	i += 1;
+				//}
+				
+				var d = 3/0;
+				document.write(d + "<br>");	// Division by zero also generates Infinity.
+			</script>
+		</body>
+	</head>
+</html>

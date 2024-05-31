@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Contains method </title>
+	</head>
+	<body>
+		<h1> Contains method </h1>
+		<hr>
+		
+		<p id="p1">
+			Contains method is used to find a tag with a specific id or class which is a child or grand child of a tag. It returns true or false.
+			
+			<h2 id="h2"> This is a text </h2>
+		</p>
+		
+		<script>
+			var target = document.querySelector("#p1");
+			var id = document.querySelector("#h2");
+			var find = target.contains(id);
+			console.log(find);
+		</script>
+	</body>
+</html>

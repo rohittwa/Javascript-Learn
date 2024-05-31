@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Strict Mode </title>
+		<style>
+			h1, p{
+				font-family:arial;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Strict Mode </h1>
+		<hr>
+		
+		<p>
+			"use strict"; Defines that JavaScript code should be executed in strict mode. <br>
+			The "use strict" directive was new in ECMAScript version 5. <br>
+			It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. <br>
+			With strict mode, you can not, use undeclared variables. <br>
+			All modern browsers support "use strict" except Internet Explorer 9 and lower.
+		</p>
+		
+		<script>
+			"use strict";
+			try{
+				for(i=1; i<=5; i++){
+					document.write("i = " + i + "<br>");
+				}
+			}
+			catch(e){
+				document.write(e.message);
+			}
+		</script>
+	</body>
+</html>

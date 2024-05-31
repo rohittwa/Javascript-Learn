@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> isEqualNode method </title>
+	</head>
+	<body>
+		<h1> isEqualNode method </h1>
+		<hr>
+		
+		<p> isEqualNode() method is used to check that a node is equal to another node or not.</p>
+		
+		Fruits :
+		<ul id="f1">
+			<li> Orange </li>
+			<li> Papaya </li>
+			<li> Watermelon </li>
+			<li> Melon </li>
+		</ul>
+		
+		Fruits2 :
+		<ul id="f2">
+			<li> Orange </li>
+			<li> Cucumber </li>
+			<li> Mango </li>
+		</ul>
+		
+	
+		<script>
+			var f1 = document.getElementById("f1").children[0];
+			var f2 = document.getElementById("f2").children[0];
+			
+			var checkEq = f1.isEqualNode(f2);
+			console.log(checkEq);
+		</script>
+	</body>
+</html>

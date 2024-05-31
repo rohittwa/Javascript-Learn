@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Using traversal methods </title>
+		<style>
+			#out{
+				width:1000px; height:400px; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+				background-color:#f5f90d; 
+			}
+			
+			#in{
+				width:800px; height:250px; margin-top:20%; margin-left:50%; transform:translate(-50%, -50%); background-color:#f9640d; border-radius:10px; box-shadow:6px 5px 6px #d5d5d5; padding:20px;
+			}
+			#in div{
+				float:left; width:100px; height:100px; background-color:#5890ab; margin-left:50px; margin-top:70px; text-align:center; box-sizing:border-box; padding-top:37px; color:white; font-size:14pt; font-family:tahoma;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h1> Using traversal methods </h1>
+		<hr>
+		
+		<div id="out">
+			Outer
+			<div id="in">
+				Inner
+				<div id="a">A</div>
+				<div id="b">B</div>
+				<div id="c">C</div>
+				<div id="d">D</div>
+				<div id="e">E</div>
+			</div>
+		</div>
+		
+		<script>
+			console.log(document.querySelector("#in").parentElement);
+			console.log(document.querySelector("#in").parentNode);
+			console.log(document.querySelector("#in").children);
+			console.log(document.querySelector("#in").children[1]);
+			console.log(document.querySelector("#in").childNodes);
+			document.querySelector("#in").childNodes[1].style = "color: blue;";
+			// We can only define style of nodes which are in tags.
+			
+			console.log(document.querySelector("#in").firstElementChild.style.color);
+			console.log(document.querySelector("#in").lastElementChild);
+			
+			console.log(document.querySelector("#in").firstChild);
+			console.log(document.querySelector("#in").lastChild);
+			
+			console.log(document.querySelector("#c").nextElementSibling);
+			console.log(document.querySelector("#c").nextSibling);
+			
+			console.log(document.querySelector("#c").previousElementSibling);
+			console.log(document.querySelector("#c").previousSibling);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DOM Css style methods </title>
+		<style>
+			div{
+				font-family:arial; font-size:15pt; color:#5d2eb1;
+			}
+			span{
+				font-family:arial; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> DOM Css style methods </h1>
+		<hr>
+		
+		<div style="font-weight:bold;" id="div1"> Q. DOM Css styling methods. </div>
+		<span>
+			Ans: <ul>
+				<li> style : It is used to get or set the style of an element.</li>
+				<li> className : It is used to get or set the className of an element.</li>
+				<li> <b>classList:</b> It is used to get or set className to an element in the form of array.<br>
+					Methods in classList :-<br>
+					1. add("className") : It is used to add one or multiple classes in an element.<br>
+					2. remove("className") : It is used to remove one or multiple class from an element.<br>
+					3. toggle("className") : <br>
+					4. contains(className) : Used to find a class in an element. It returns true or false.<br>
+					5. item(className) : Used to get the className by specifying index.<br><br>
+					
+					Property in classList :-<br>
+					1. length : used to find the number of classes in an element.
+				</li>
+			</ul>
+		</span>
+		
+		<div id="div2"> This is div2 </div>
+		
+		<script>
+			console.log(document.getElementById("div1").style);
+			//document.write(document.getElementsByTagName('div').style + "<br>"); We cann't access style of multiple tags in one statement.
+			document.getElementsByTagName("div").className = "div1";
+			document.write(document.getElementsByTagName("div").className + "<br>"); // It is giving the className of first div tag.
+			document.write(document.getElementsByTagName("div").classList + "<br>");
+			
+			document.querySelector("#div2").className = "div2_1 div2_2";	// We can set className of an element by accessing the element with its id.
+			document.write(document.querySelector("#div2").className + "<br>");
+			console.log(document.querySelector("#div2").classList);
+			
+			document.querySelector("#div2").classList.add("div2_3");
+			
+			document.querySelector("#div2").classList.remove("div2_2");
+			
+			console.log(document.querySelector("#div2").className);
+			
+			document.write(document.querySelector("#div2").classList.length + "<br>");
+			
+			document.querySelector("#div2").classList.toggle("xyz");
+			
+			document.write(document.querySelector("#div2").classList.item(1) + "<br>");
+			
+			document.write(document.querySelector("#div2").classList.contains("div3"));
+		</script>
+	</body>
+</html>

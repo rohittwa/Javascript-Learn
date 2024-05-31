@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Errors </title>
+		<style>
+			h1, h2, span, p{
+				font-family:arial;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Errors </h1>
+		<hr>
+		
+		<h2> Throw, and Try...Catch...Finally </h2>
+		<span>
+			The try statement defines a code block to run (to try). <br>
+			The catch statement defines a code block to handle any error.<br>
+			The finally statement defines a code block to run regardless of the result.<br>
+			The throw statement defines a custom error.<br><br>
+			
+			By using these statements if an error happens then the code after the error code will run.
+		</span>
+		
+		<h2> Errors Will Happen! </h2>
+		<span>
+			When executing JavaScript code, different errors can occur. <br>
+			Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things.<br><br>
+			
+			Example:<br>
+			In this example we misspelled "alert" as "adddlert" to deliberately produce an error:<br>
+			
+			<div style="background-color:yellow; width:460px;">
+				&lt;p id="demo"&gt;&lt;/p&gt;<br><br>
+
+				&lt;script&gt;<br>
+				try {<br>
+				  adddlert("Welcome guest!");<br>
+				}<br>
+				catch(err) {<br>
+				  document.getElementById("demo").innerHTML = err.message;<br>
+				}<br>
+				&lt;/script&gt;<br>
+			</div> <br>
+			
+			JavaScript catches adddlert as an error, and executes the catch code to handle it.
+		</span>
+		
+		<p id="sErr"></p>
+		
+		<h2> JavaScript Throws Errors </h2>
+		<span>
+			When an error occurs, JavaScript will normally stop and generate an error message. <br>
+			The technical term for this is: JavaScript will throw an exception (throw an error). <br>
+			
+			JavaScript will actually create an Error object with two properties: name and message.
+		</span>
+		
+		<h2> The throw Statement </h2>
+		<span>
+			The throw statement allows you to create a custom error.<br>
+			Technically you can throw an exception (throw an error).<br>
+			The exception can be a JavaScript String, a Number, a Boolean or an Object.
+		</span>
+		
+		<script>
+			try{	// The try statement allows you to define a block of code to be tested for errors while it is being executed.
+				aalert("Hello");
+			}
+			catch(err){			// catch method runs if there is any error in the try block.
+				document.getElementById("sErr").textContent = err.message;
+			}
+			// The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+			// The JavaScript statements try and catch come in pairs.
+			// JavaScript will actually create an Error object with two properties: name and message.
+			
+			var x = document.getElementById("sErr").innerHTML;
+			try{
+				if(x2 != "")
+				{
+					throw "p is not empty!";
+				}
+			}
+			catch(err){
+				alert(err.message + " " + err.name + " " + err.stack);	// stack is the location of the file.
+			}
+			finally{
+				document.write("Some text");	// It gets executed whether there is an exception or not.
+			}
+		</script>
+	</body>
+</html>

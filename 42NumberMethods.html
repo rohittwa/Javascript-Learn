@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Number methods</title>
+	</head>
+	<body>
+		<h1>Number methods</h1>
+		<hr>
+		
+		<script>
+			// The toString() method returns a number as a string.
+			// All number methods can be used on any type of numbers (literals, variables, or expressions).
+			var n1 = 1234;
+			document.write("n1.toString()+5 : " + n1.toString()+5 + "<br>");
+			
+			// The toExponential() Method
+			// toExponential() returns a string, with a number rounded and written using exponential notation.
+			document.write("n1.toExponential() : " + n1.toExponential() + "<br>");
+			
+			var n2 = 356.593;
+			// The toFixed() Method
+			// toFixed() returns a string, with the number written with a specified number of decimals.
+			document.write("n2.toFixed() : " + n2.toFixed(5) + "<br>");
+			
+			// The toPrecision() Method
+			// toPrecision() returns a string, with a number written with a specified length ignoring the '.'.
+			document.write("n2.toPrecision(4)+2 : " + n2.toPrecision(4)+2 + "<br>");
+		</script>
+	</body>
+</html>

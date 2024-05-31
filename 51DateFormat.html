@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Date format</title>
+	</head>
+	<body>
+		<h1>Date format</h1>
+		<hr>
+		
+		<script>
+			// JavaScript Date Input
+			// There are generally 3 types of JavaScript date input formats:
+			// Type 															Example
+			// ISO Date														"2015-03-25" (The international standard)
+			// Short Date 													"03/25/2015"
+			// Long Date													"Mar 25 2015" or "25 Mar 2015"
+			
+			var d1 = new Date("2015-01-25");
+			document.write("d1 : " + d1 + "<br>");
+			// In string the month starts with 1.
+			
+			var d2 = new Date("03/25/2015");
+			document.write("d2 : " + d2 + "<br>");
+			
+			var d3 = new Date("Mar 22 2016");
+			document.write("d3 : " + d3 + "<br>");
+			
+			var d4 = new Date("23 Mar 2017");
+			document.write("d4 : " + d4 + "<br>");
+			
+			// ISO dates can be written without specifying the day (YYYY-MM):
+			var d5 = new Date("2013-06");
+			document.write("d5 : " + d5 + "<br>");
+			
+			// ISO dates can be written without month and day (YYYY):
+			var d6 = new Date("2020");
+			document.write("d6 : " + d6 + "<br>");
+			
+			// ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):
+			var d7 = new Date("2015-03-25T12:00:00");
+			document.write("d7 : " + d7 + "<br>");
+			// Date and time is separated with a capital T.
+			// UTC time is defined with a capital letter Z.
+			// If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead:
+			// Omitting T or Z in a date-time string can give different results in different browsers.
+			
+			// Date Input - Parsing Dates
+			// If you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.
+			// Date.parse() returns the number of milliseconds between the date and January 1, 1970:
+			let d8 = Date.parse("March 21, 2012");
+			document.write("d8 : " + d8 + "<br>");
+		</script>
+	</body>
+</html>
