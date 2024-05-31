@@ -1,0 +1,24 @@
+<html>
+    <head>
+		<title>Closure</title>
+    </head>
+    <body>
+        <script>
+            function outer_func(){
+                var a = 'Outer function\'s variable';
+                document.write('a = ' + a + '<br>');
+                
+                function inner_func(){
+                    var b = 'Inner function\'s variable';
+                    document.write('b = ' + b + '<br>');
+                }
+                
+                //document.write(b); 
+				//We cannot access the inner function's variable in outer function. But we can access the inner variable's value in outer function.
+                inner_func()
+                document.write("b = " + b);
+            }
+            outer_func()
+        </script>
+    </body>
+</html>

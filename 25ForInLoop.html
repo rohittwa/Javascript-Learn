@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>For In Loop</title>
+    </head>
+    <body>
+        <h1>For In loop</h1>
+        
+        <script>
+            //For in loop is used to iterate the properties of an object.
+            
+            var arr1 = {
+                a:1,
+                b:2,
+                c:3,
+                d:4
+            };
+            for(var a in arr1){
+                document.write(arr1[a] + '<br>');       // We cann't use . operator here.
+            }
+
+            var arr2 = [5, 7, 2, 1];
+            for(var b in arr2)
+            {
+                document.write(arr2[b] + "<br>");
+            }
+        </script>
+    </body>
+</html>

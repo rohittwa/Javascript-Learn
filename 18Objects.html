@@ -1,0 +1,45 @@
+<html>
+    <head>
+		<title>Objects</title>
+		
+        <style>
+            li, p{
+				font-size: 19pt; font-family: arial;
+            }
+			
+			#ans{
+				font-size: 19pt; font-family: arial;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>Objects</h1>
+        
+        <p>
+            An object is a collection of properties, and a property is an association between a name (or key)
+            and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects.<br>
+            
+            Ex:-<br>
+        </p>
+<pre>
+var fees = {
+  Rahul:100,    <!-- Properties -->
+  Sam:200,
+  Rohan:300,
+  total:function(){return (100+200+300);}   <!-- Method -->
+};
+</pre>
+        <p id="ans">
+            Type of objects :-
+            <ol>
+                <li>User defined objects : These are custom objects created by the programmer to bring structure and consistency to a particular programming task.</li>
+                
+                <li>Native objects : These are provided by the Javascript language itself like String, Number, Boolean, Function, Date, Object, Array, Math, RegExp, Error as well as object that allow creation of user-defined objects and composite types.</li>
+                
+                <li>Host objects : These objects are not specified as part of the Javascript language but that are supported by most host environments, typically browsers like window, navigator.</li>
+                
+                <li>Document objects : These are part of the Document Object Model (DOM), as defined by the W3C. These objects presents the programmer with a structured interface to HTML and XML documents. Access to the document objects is provided by the browser via the document property of the window object (window.document).</li>
+            </ol>
+		</p>
+    </body>
+</html>

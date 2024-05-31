@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <script>
+        /*
+            Inheritance means making a base class from a parent class. It helps us to use the properties and methods of the parent class in child class without writing them in base class.
+        */
+
+        class Parent{
+            name;
+            age;
+            salary;
+
+            constructor(n, a, s)
+            {
+                this.name=n;
+                this.age=a;
+                this.salary=s;
+            }
+
+            show()
+            {
+                console.log("Parent Name = " + this.name);
+                console.log("Parent age = " + this.age);
+                console.log("Parent Salary = " + this.salary);
+            }
+        }
+
+        class Child extends Parent{
+            cname;
+            cage;
+            csalary;
+
+            constructor(n, a, s)
+            {
+                super("Rahul", 40, 100000);
+
+                this.cname=n;
+                this.cage=a;
+                this.csalary=s;
+            }
+
+            show()
+            {
+                console.log("Child name = " + this.cname);
+                console.log("Child age = " + this.cage);
+                console.log("Child salary = " + this.csalary);
+
+                super.show();
+            }
+        }
+
+        // var p1 = new Parent("Rahul", 40, 100000);
+        // p1.show();
+        var c1 = new Child("Aryan", 19, 46000);
+        c1.show();
+    </script>
+</body>
+</html>

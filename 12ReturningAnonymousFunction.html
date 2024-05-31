@@ -1,0 +1,18 @@
+<html>
+    <head>
+    
+    </head>
+    <title>Returning anonymous function</title>
+    <body>
+        <h1>Returning anonymous function</h1>
+        
+        <script>
+            function show(){
+                return function(){return 'Hi everyone'};
+            }
+            
+            var af = show();
+            document.write(af());
+        </script>
+    </body>
+</html>

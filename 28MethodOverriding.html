@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding</title>
+</head>
+<body>
+    <script>
+        class Book{
+            name1;
+            publisher1;
+            price1;
+
+            constructor(name1, publish1, price1){
+                this.name1=name1;
+                this.publisher1=publish1;
+                this.price1=price1;
+            }
+
+            show()
+            {
+                document.write("Name1 = " + this.name1);
+                document.write("<br>Publisher2 = " + this.publisher1);
+                document.write("<br>Price1 = " + this.price1);
+            }
+        }
+
+        class Copy extends Book{
+            name2;
+            size2;
+            price2;
+
+            constructor(n2, s2, p2){
+                super("Geeta", "Krishna", 70);
+                super.show();
+
+                this.name2=n2;
+                this.size2=s2;
+                this.price2=p2;
+            }
+
+            show(){
+                document.write("<br>Name2 = " + this.name2);
+                document.write("<br>Size2 = " + this.size2);
+                document.write("<br>Price2 = " + this.price2);
+            }
+        }
+
+        var copy1 = new Copy("Rohit", "A4", 60);
+        copy1.show();
+    </script>
+</body>
+</html>

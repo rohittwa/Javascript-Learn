@@ -1,0 +1,15 @@
+<html>
+    <head>
+    
+    </head>
+    <title>Anonymous function as argument</title>
+    <body>
+        <script>
+            function disp(myfun){
+                return myfun();
+            }
+            
+            document.write(disp(function(){return 'Hello World!';}));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Method overriding</title>
+	</head>
+	<body>
+		<h1>Method overriding</h1>
+		<hr>
+		
+		<p>
+			Method overriding means to create a method in subclass with the same name as in super class and with different behavior.
+		</p>
+		
+		<script>
+			function Mobile(){
+				this.model = "Poco C3";
+				this.price = function(){
+					return 3000;
+				};
+			}
+			
+			function Mobile2(){
+				Mobile.call(this);
+				this.model = "Redmi 9A";
+				this.price = function(){
+					return 2999;
+				};
+			}
+			
+			var redmi = new Mobile2();						// The properties in sub class is overridden therefore we are getting access of the values of properties in sub class.
+			document.write(redmi.model+ "<br>");
+			document.write(redmi.price() + "<br>");
+			
+			var poco = new Mobile();
+			document.write(poco.model + "<br>");
+			document.write(poco.price() + "<br>");
+			
+		</script>
+	</body>
+</html>

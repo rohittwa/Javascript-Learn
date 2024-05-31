@@ -1,0 +1,31 @@
+<html>
+    <head>
+        
+    </head>
+    <title>Function expression</title>
+    <body>
+        <h1>Function expression</h1>
+        
+        When we create a function and assign it to a variable, it is know as function expression.<br>
+        Ex:-<br>
+        var myfun = function show(){<br>
+            document.write('Geekyshows');<br>
+        };<br>
+        
+        Note:-<br>
+        <ul>
+            <li>You can't call function expression before function definition.</li>
+            <li>Function expressions in Javascript are not hoisted, unlike function declarations.</li>
+        </ul>
+        
+        <script>
+            //Fun("dfkj", "fdlk");
+            var Fun = function (a, b){
+                c = a+b;
+                document.write('c = '+ c + '<br>');
+            };
+            
+            Fun('Rohit', 'Thakur');
+        </script>
+    </body>
+</html>

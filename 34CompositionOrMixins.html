@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Composition or Mixins</title>
+	</head>
+	<body>
+		<h1>Composition or Mixins</h1>
+		<hr>
+		
+		<p>The process of removing the unnecessary properties from a sub class is called Composition or Mixins.</p>
+		
+		<script>
+			var eating = {
+				eat: function(){
+					return "I can eat. <br>";
+				}
+			};
+			
+			var walking = {
+				walk: function(){
+					return "I can walk. <br>";
+				}
+			};
+			
+			var talking = {
+				talk: function(){
+					return "I can talk. <br>";
+				}
+			};
+			
+			var playing = {
+				play: function(){
+					return "I can play. <br>";
+				}
+			};
+			
+			var Rahul = Object.assign({}, eating, walking, talking, playing)						// These properties are assigned in the {} when it runs by Javascript engine.
+			document.write(Rahul.talk());
+			
+			var Robot = Object.assign({}, walking, talking, playing);
+		</script>
+	</body>
+</html>

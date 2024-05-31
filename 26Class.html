@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <script>
+        /*
+            In JavaScript, Classes define blueprints for creating objects with similar properties and methods. They offer a more structured approach to object-oriented programming.
+
+            Classes are similar to functions. Here, a class keyword is used instead of a function keyword. Unlike functions classes in JavaScript are not hoisted. The constructor method is used to initialize. The class name is user-defined.
+        */
+
+        class Car{
+            name;
+            color;
+            engine;
+
+            constructor(n, c, e)
+            {
+                this.name = n;
+                this.color = c;
+                this.engine = e;
+            }
+
+            show(){
+                document.write("Name = " + this.name);
+                document.write("<br>Color = " + this.color);
+                document.write("<br>Engine = " + this.engine);
+            }
+        }
+
+        var car = new Car("Audi", "Blue", "150cc");
+        car.show();
+    </script>
+</body>
+</html>

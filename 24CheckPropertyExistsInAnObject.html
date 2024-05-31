@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Check a property exists in an object</title>
+    </head>
+    <body>
+        <h1>Check a property exists in an object</h1>
+        
+        <script>
+            // We can check a property exists in an object or not by checking their datatype, if it is undefined then the property not exists in the object otherwise it exists.
+            
+            var age = {
+                Ravi:null,
+                Karan:14,
+                Arun:15,
+                Raman:10
+            };
+            
+            document.write('typeof(age.Ravi) : ' + typeof(age.Ravi) + '<br>');
+            document.write('typeof(age.Karan) : ' + typeof(age.Karan) + '<br>');
+            
+            if(typeof(age.Avi) === 'undefined'){
+                document.write('typeof(age.Avi) : ' + typeof(age.Avi) + ' ' + "Property not in object.");
+            }
+        </script>
+    </body>
+</html>

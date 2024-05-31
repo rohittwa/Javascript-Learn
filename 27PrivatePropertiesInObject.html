@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Private properties in object</title>
+    </head>
+    <body>
+        <h1>Private properties in object</h1>
+        
+        <p>
+            We can make a property private by using var, let or const keyword instead of this keyword. By making a property private we cann't access it from outside the object.
+        </p>
+        
+        <script>
+            function Mobile(retail_price, gst){
+                this.model = 'Vivo V12 S';
+                this.color = 'Sky Blue';
+                var sp = function(){
+                    return retail_price+gst;
+                };
+                this.ram = '4Gb';
+                this.cpu = '2Ghz';
+            }
+            
+            var vivo = new Mobile(8799, 1000);
+            document.write(vivo.model + '<br>');
+            document.write(vivo.color + '<br>');
+            //document.write(vivo.sp() + '<br>');
+            document.write(vivo.ram + '<br>');
+            document.write(vivo.cpu + '<br>');
+        </script>
+    </body>
+</html>

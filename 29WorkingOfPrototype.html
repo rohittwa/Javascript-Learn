@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Working of prototype</title>
+    </head>
+    <body>
+        <h1>Working of prototype</h1>
+        <hr>
+        
+        <p>
+            Prototype is the property of the function which points to the prototype object. Prototype object can be accessed using Function_name.prototype.<br>
+            
+            When you create a new object of that function using new keyword JS engine creates an object and sets a property named __proto__ which points to its function's prototype object.<br>
+            
+            Ex:-<br>
+            function Mobile(){<br>
+                <br>
+            }<br>
+            
+            var lg = new Mobile();<br>
+            lg.__proto__ === Mobile.prototype<br>
+            lg.__proto__.a === Mobile.prototype.a <br>
+            
+            <img src="E:\Pictures\Saved Pictures\Screenshot (131).png" width="600px" height="340px">
+        </p>
+        
+        <script>
+            function Mobile(){
+                this.c = 11;
+            }
+            var redmi = new Mobile();
+            
+            console.log(Mobile);
+            console.log(Mobile.prototype);
+            
+            console.log(redmi.__proto__);
+            console.log(Mobile.prototype === redmi.__proto__);
+            console.log(Mobile === redmi.__proto__.constructor);
+            
+            Mobile.prototype.b = 10;
+            Mobile.prototype.c = 12;
+            console.log(redmi.a);		// Javascript engine is finding the value of a from the object prototype.
+            console.log(redmi.b);
+            console.log(redmi.c);
+        </script>
+    </body>
+</html>

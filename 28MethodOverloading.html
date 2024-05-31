@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overloading</title>
+</head>
+<body>
+    <script>
+        class Add{
+            add(...nums)
+            {
+                document.write("Second method called!<br>");
+                let total=0;
+                for(var i in nums)
+                {
+                    document.write(typeof(i)+ " i=" + i+"<br>");
+                    total+=nums[i];
+                }
+                return total;
+            }
+
+            add(a, b)
+            {
+                document.write("First method called!<br>");
+                document.write(typeof(a));
+                return (parseInt(a)+parseInt(b));
+            }
+        }
+
+        var add1 = new Add();
+        document.write(add1.add(3, 5) + "<br>");
+        document.write(add1.add(7, 2, 9));
+    </script>
+</body>
+</html>

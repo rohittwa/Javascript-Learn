@@ -1,0 +1,29 @@
+<html>
+	<head>
+		
+	</head>
+	<title>Object Constructor</title>
+	<body>
+		<h1>Object Constructor</h1>
+		
+		<script>
+			// We can create an object using object constructor.
+			// Syntax : var object_name = new Object();
+			
+			var fees = new Object();
+			fees.Rahul = 100;
+			fees.Rohan = 110;
+			fees.Swati = 120;
+			fees.Sonam = 105;
+			fees.total = function(){
+				return (fees.Rahul+fees.Rohan+fees.Swati+fees.Sonam);
+			};
+			
+			document.write(fees.Rahul + '<br>');
+			document.write(fees.Rohan + '<br>');
+			document.write(fees.Swati + '<br>');
+			document.write(fees.Sonam + '<br>');
+			document.write(fees.total() + '<br>');
+		</script>
+	</body>
+</html>

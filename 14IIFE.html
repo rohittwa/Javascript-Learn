@@ -1,0 +1,25 @@
+<html>
+    <head>
+    
+    </head>
+    <title>IIFE</title>
+    <body>
+        <h1>IIFE</h1>
+        
+        <p> 
+            IIFE (Immediately Invoked Function Expression) is a javascript function that runs as soon as it is defined. <br>
+        
+            It is a design pattern which is also known as Self-Executing Anonymous function with lixical scope enclosed within the Grouping Operator(). This prevents accessing variables within the IIFE idiom as well as polluting the global scope.<br>
+            
+            The second part is creating the immediately executing function expression(), through which the javascript engine will directly interpret the function.<br>
+            
+            Ex:-<br>
+            (function() {document.write('Geekyshows');})();
+            (function(a, b) {document.write(a + "" + b);})(10, 20);
+        </p>
+        
+        <script>
+            (function(){document.write('My name is Rohit');})();    // The parentheses in which the function is enclosed is called grouping operator.
+        </script>
+    </body>
+</html>

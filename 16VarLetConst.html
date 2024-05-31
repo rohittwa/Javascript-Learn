@@ -1,0 +1,37 @@
+<html>
+    <head>
+    
+    </head>
+    <title>var, let, const keywords</title>
+    <body>
+        <h1>var, let, const keywords</h1>
+        
+        <p> <b>var :</b> The scope of a variable declared with var is global. We can redeclare a var variable.</p>
+        
+        <p> <b>let :</b> The scope of a variable declared with let is restricted to the block in which it is declared. We can not redeclare a let variable.</p>
+        
+        <p> <b>const : </b> The scope of a variable declared with const is block. The value in the const variable must be initialized and not changed. We can not redeclare a const variable.</p>
+        
+        <script>
+            var a = 5;      // Variables created with var keyword are made the property of Window object.
+            
+            function add(b){
+                var c = a+b;
+                document.write('c = ' + c);
+            }
+            add(6);
+            
+            //document.write('c : ' + c);   We cann't use the function's variable outside the function.
+            document.write('<br>');
+            for(let b=1; b<=5; b++){    // Variables created with let keyword are not made the property of Window object.
+                document.write(b + "<br>");
+            }
+            
+            //document.write(b);        We cann't access b outside its block.
+            
+            
+            const d=Math.PI;    // Variables created with const keyword are not made the property of Window object.
+            document.write('<br>c = ' + d);
+        </script>
+    </body>
+</html>

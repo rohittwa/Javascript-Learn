@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Prototype</title>
+    </head>
+    <body>
+        <h1>Prototype</h1>
+        
+        <script>
+            // Prototype is used to add a property in an object.
+            // Syntax : class_name.prototype.key = value;
+            
+            function Biscuits(name, flavour, price, n){
+                this.name = name;
+                this.flavour = flavour;
+                this.price = price;
+                this.num = n;
+            }
+            
+            hh = new Biscuits('Happy Happy', 'Chocolate', 5, 7);
+            Biscuits.prototype.no_of_bisc = hh.num;
+            
+            for(var p in hh){
+                document.write(hh[p] + '<br>');
+            }
+
+            class Box{
+                breadth;
+                width;
+                height;
+
+                constructor(b, w, h){
+                    this.breadth=b;
+                    this.width=w;
+                    this.height=h;
+                };
+
+                show(){
+                    console.log("Breadth = " + this.breadth);
+                    console.log("Width = " + this.width);
+                    console.log("Height = " + this.height);
+                };
+            }
+            var b = new Box(5, 7, 3);
+            b.show();
+            var p1 = {
+                run:()=>{
+                    console.log("Run");
+                }
+            };
+            b.__proto__=p1;
+            b.run();
+        </script>
+    </body>
+</html>

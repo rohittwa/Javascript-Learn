@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title> String methods </title>
+</head>
+	<body style="line-height:25px; font-size:15pt;">
+		<h1>String methods</h1>
+		<hr>
+		
+		<script>
+			var s = "Welcome to javascript";
+			document.write("s.length : " + s.length + "<br>");
+			
+			var s2 = "Hello world";
+			document.write(s2.toUpperCase() + "<br>");
+			document.write(s2.toLowerCase() + "<br>");
+			
+			var s3 = "Honesty is the best policy";
+			document.write(s3.match("policy") + "<br>");
+			document.write("s3.match(" + "police" + ") : " + s3.match("police") + "<br>");
+            // match method is used to find a string in a given string, if the string is found it returns the string, else returns null.
+			
+			var s4 = "Good day";
+			document.write("s4.replace(" + "day," + "Morning" + ") : " + s4.replace("day" , "Morning") + "<br>");
+			document.write(s4.bold() + "<br>");
+
+			var s5 = "Welcome";
+			document.write("s5.concat('to India') : " + s5.concat(' to India') + "<br>");
+
+			var s6 = "Welcome to javascript";
+			document.write("s6.split('') : " + s6.split(" ") + "<br>");		// We can split the string on the basis of specified value in the round brackets.
+			var splits6 = s6.split(" ");
+			document.write("splits6[0] = " + splits6[0] + "<br>");
+
+			document.write("s3.split('') : " + s3.split('') + "<br>");
+			console.log(s3.split('i'));
+			document.write("s6.charAt(3) = " + s6.charAt(3) + "<br>");
+			
+			var s7 = "Be Positive";
+			document.write("s7.localeCompare(\"osi\") : " + s7.localeCompare("Be") + "<br>");		// localeCompare checks that a word is present in the string or not.
+            // localeCompare() method is not working.
+			
+            var s8 = "I live in Chandigarh";
+            // slice method is used to extract a piece of string from a string.
+            // Syntax : string_name.slice(start, end);
+            // We can use negative indexes to extract the string.
+            
+            // substring() and substr() methods also works same as slice() method.
+            document.write("s8.slice(2, 8) : " + s8.slice(2, 8) + "<br>");
+            document.write("s8.slice(-5, -2) : " + s8.slice(-5, -2) + "<br>");
+			document.write("s8 = " + s8 + "<br>");
+            
+            // padStart() method is used to replace the given number of characters from starting with given character or string.
+            var s9 = "A";
+            document.write("s9.padStart(4, \"x\") : " + s9.padStart(5, "x") + "<br>");
+            
+            // padStart() method is used to replace the given number of characters from end with given character or string.
+            var s10 = "B";
+            document.write("s10.padEnd(4, \"y\")  : " + s10.padEnd(4, "y") + "<br>");
+            
+            var s11 = "We are very happy";
+            document.write("s11.charAt(4) : " + s11.charAt(4) + "<br>");
+            
+            document.write("s11.charCodeAt(4) : " + s11.charCodeAt(4) + "<br>");
+			
+			// indexOf() method  returns the index of the first occurrence of a specified text in a string.
+			document.write("s11.indexOf('r') : " + s11.indexOf('r') + "<br>");
+			
+			//The lastIndexOf() method returns the index of the last occurrence of a specified text in a string.
+			document.write("s11.lastIndexOf('r') : " + s11.lastIndexOf('r') + "<br>");
+			
+			// The startsWith() method returns true if a string starts with the given string otherwise false.
+			document.write("s11.startsWith(\"We\") : " + s11.startsWith("We") + "<br>");
+			
+			// The endsWith() method returns true if a string ends with a specified value, otherwise false.
+			document.write("s11.endsWith(\"ppy\") : " + s11.endsWith("ppy") + "<br>");
+		</script>
+	</body>
+</html>

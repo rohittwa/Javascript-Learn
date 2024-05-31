@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>One super class and two sub classes</title>
+    </head>
+    <body>
+        <h1>One super class and two sub classes</h1>
+        <hr>
+        
+        <script>
+			// We can access the properties of a class in its prototype by using this keyword and property name.
+            var Mobile = function(){
+                
+            };
+            
+            Mobile.prototype.getModel = function(){
+                return this.model;
+            };
+            
+            var Samsung = function(model, price){
+                this.model = model;
+                this.price = price;
+            };
+            Samsung.prototype = Object.create(Mobile.prototype);
+            Samsung.prototype.getPrice = function(){
+                return this.price;
+            };
+            
+            var Lenovo = function(model){
+                this.model = model;
+            };
+            Lenovo.prototype = Object.create(Mobile.prototype);
+            
+            var galaxy = new Samsung('Galaxy', 3000);
+            var phab2 = new Lenovo('Phab 2');
+            
+            document.write(galaxy.getModel() + '<br>');
+            document.write(galaxy.getPrice() + '<br>')
+            document.write(phab2.getModel() + '<br>');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Prototype object</title>
+    </head>
+    <body>
+        <h1>Prototype object</h1>
+        
+        <p>Every object is associated with another object in Javascrit i.e Object.prototype. It means that the second object will inherit all the properties of first object.</p>
+        
+        <script>
+            console.log(Object.prototype);
+            
+            var a = {};
+            document.write(Object.getPrototypeOf(a) + '<br>');
+            document.write(Object.getPrototypeOf(Object.prototype) + '<br>');
+            
+            var b = new Array();
+            console.log(Object.getPrototypeOf(b));
+            
+            console.log(Object.getPrototypeOf(Array.prototype));
+            
+            var c = new String();
+            console.log(Object.getPrototypeOf(c));
+            
+            var d = new String("Hello");
+            document.write(d.fontcolor("red") + '<br>');
+            document.write(d.fontsize("20pt") + '<br>');
+        </script>
+    </body>
+</html>

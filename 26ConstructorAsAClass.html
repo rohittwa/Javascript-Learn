@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Constructor as a class</title>
+    </head>
+    <body>
+        <h1>Constructor as a class</h1>
+        
+        <script>
+            // When we create a constructor expression it is called a class.
+            
+            var Mobile = function(model, price, color, ram, cpu){       // The class name should be in capital letter.
+                this.model = model;
+                this.price = function(){
+                    return price;
+                };
+                this.color = color;
+                this.ram = ram;
+                this.cpu = cpu;
+            }
+            
+            var redmi = new Mobile('Redmi 9A', 7999, 'Black', '4Gb', '1.3Ghz');
+            document.write(redmi.model + '<br>');
+            document.write(redmi.price() + '<br>');
+            document.write(redmi.color + '<br>');
+            document.write(redmi.ram + '<br>');
+            document.write(redmi.cpu + '<br>');
+            
+            document.write('<br>');
+            
+            var poco = new Mobile('Poco C3', 7899, 'Green', '4Gb', '1.4Ghz');
+            document.write(poco.model + '<br>');
+            document.write(poco.price() + '<br>');
+            document.write(poco.color + '<br>');
+            document.write(poco.ram + '<br>');
+            document.write(poco.cpu + '<br>');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Events test</title>
+	</head>
+	<style>
+		h1{
+			font-family:tahoma; font-size:29pt; color:purple; text-align:center;
+		}
+	
+		hr{
+			margin-top:-20px;
+		}
+	
+		div{
+			float:left;
+		}
+	
+		#d1{
+			font-size:18pt; font-family:arial; color:white; background-color:#dd0000; border-radius:10px; width:200px; height:200px; margin-top:50px; margin-left:50px; text-align:center; box-sizing:border-box;  padding:30px; padding-top:62px;
+		}
+		
+		#d2{
+			font-size:18pt; font-family:arial; color:white; background-color:#21ade5; border-radius:10px; width:200px; height:200px; margin-top:50px; margin-left:50px; text-align:center; box-sizing:border-box;  padding:30px; padding-top:42px;
+		}
+		
+		#d3{
+			font-size:18pt; font-family:arial; color:white; background-color:#ffe214; border-radius:10px; width:200px; height:200px; margin-top:50px; margin-left:50px; text-align:center; box-sizing:border-box;  padding:30px; padding-top:65px;
+		}
+		
+		#d4{
+			font-size:18pt; font-family:arial; color:white; background-color:#41cd38; border-radius:10px; width:200px; height:200px; margin-top:50px; margin-left:50px; text-align:center; box-sizing:border-box; padding:30px; padding-top:65px;
+		}
+		
+		#d5{
+			font-size:18pt; font-family:arial; color:white; background-color:#0bcce5; border-radius:10px; width:200px; height:200px; margin-top:50px; margin-left:50px; text-align:center; box-sizing:border-box; padding:30px; padding-top:65px; z-index:1;
+		}
+		#d5_1{
+			font-size:18pt; font-family:arial; color:white; background-color:#673ab7; border-radius:10px; width:150px; height:150px; margin-top:25%; margin-left:50%; transform:translate(-50%, -50%); text-align:center; box-sizing:border-box; padding:30px; padding-top:65px; z-index:2;
+		}
+		
+		#d6{
+			position:fixed; margin-top:300px;
+		}
+	</style>
+	<body>
+		<h1>Events</h1>
+		<hr color="purple">
+	
+		<div id="d1" onclick="cd1()"> Click on me to see effect </div> 
+		<div id="d2" onmouseover="cd2()"> Let the Mouse over me to see the effect </div>
+		<div id="d3" onmouseout="cd3()">Mouse out from me</div>
+		<div id="d4">Let the Mouse over me to see the effect</div>
+		<div id="d5">
+			<div id="d5_1"> Double click on me </div>
+		</div>
+		
+		<br><br>
+		<div id="d6">
+			Enter a character : <br><input type="text" id="tb">
+		</div>
+		
+		<script>
+			function cd1(){
+				document.getElementById("d1").style = "background-color:#0af347; font-family:dejavu sans;";
+			}
+			
+			function cd2(){
+				document.getElementById("d2").style = "background-color:#030506; color:white; font-family:dejavu sans;";
+			}
+			
+			function cd3(){
+				document.getElementById("d3").style = "background-color:#de26ff; color:white; font-family:dejavu sans;";
+			}
+			document.getElementById("d3").removeEventListener("mouseout", cd3);
+			
+			document.querySelector("#d4").addEventListener("mouseenter", function(){
+				document.querySelector("#d4").style = "background-color:#ad5637";
+				document.querySelector("#d4").innerHTML = "Hello!";
+			});
+			
+			function cd4(){
+				document.querySelector("#d4").style = "background-color:#41cd38";
+				document.querySelector("#d4").innerHTML = "Let the Mouse over me to see the effect";
+			}
+			document.querySelector("#d4").addEventListener("mouseout", cd4, true);
+			document.querySelector("#d4").removeEventListener("mousout", cd4, true);
+			
+			document.querySelector("#d5").addEventListener("dblclick", function(){
+				document.querySelector("#d5").style = "background-color:#ff8115; z-index:1;";
+				document.querySelector("#d5_1").style = "z-index:2;";
+				document.querySelector("#d5").innerHTML = "Hello!";
+				alert("Outer div");
+			}, true);
+			
+			document.querySelector("#d5_1").addEventListener("dblclick", function(){
+				document.querySelector("#d5_1").style = "background-color:#ff1597;";
+				document.querySelector("#d5_1").innerHTML = "Hi!";
+				alert("Inner div");
+			}, true);
+			
+			document.querySelector("#tb").addEventListener("keydown", function(e){
+				console.log(e.keyCode);
+			});
+			document.querySelector("#tb").addEventListener("keypress", function(e){
+				console.log(e.keyCode);
+			});
+			document.querySelector("#tb").addEventListener("keyup", function(e){
+				console.log(e.keyCode);
+			});
+		</script>
+	</body>
+</html>

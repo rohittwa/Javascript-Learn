@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+<body>
+    <script>
+        /*
+            In JavaScript, public members of a class are accessible from anywhere in the code. They are the default in JavaScript classes and can be accessed both inside and outside of the class.
+        */
+
+        class Person{
+            name;                       // Public property
+            gender;
+            #salary=0;                  // Private property
+
+            constructor(n, g, s)
+            {
+                this.name = n;
+                this.gender = g;
+                this.#salary = s;
+            }
+
+            show()
+            {
+                document.write("Name = " + this.name);
+                document.write("<br>Gender = " + this.gender);
+                document.write("<br>Salary = " + this.#salary);
+            }
+        }
+
+        var p = new Person("Ravi", "Male", 38850);
+        p.show();
+    </script>
+</body>
+</html>

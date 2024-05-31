@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>String Templates</title>
+	</head>
+	<body>
+		<h1>String Templates</h1>
+		<hr>
+		
+		<script>
+			var str1 = `He's often called "johnny"`;		// With back ticks we can use single and double quotes.
+			document.write(str1 + "<br>");
+			
+			var str2 = `The quick 
+			brown fox
+			jumps over 
+			the lazy dog`;
+			document.write(str2 + "<br>");
+			
+			// Interpolation :
+			// Template literals provide an easy way to interpolate variables and expressions into strings.
+			// The method is called string interpolation.
+			// The syntax is:
+			// ${...}
+			var fName = "John";
+			var lName = "Doe";
+			document.write(`Welcome ${fName} ${lName} <br>`);
+			
+			// Numbers with Interpolation:
+			var a = 5;
+			var b = 6;
+			document.write(`Multiplication of a and b is ${a*b} <br>`);
+			
+			// HTML tags with Interpolation :
+			document.write(`<br>Loops in Javascript : <br>`);
+			document.write(`<ul>`);
+			document.write(`<li>for loop</li>`);
+			document.write(`<li>for in loop</li>`);
+			document.write(`<li>for of loop</li>`);
+			document.write(`<li>while loop</li>`);
+			document.write(`<li>do while loop</li>`);
+			document.write(`</ul>`);
+		</script>
+	</body>
+</html>

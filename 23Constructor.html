@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Constructor</title>
+    </head>
+    <body>
+        <h1>Constructor</h1>
+        
+        <p>
+            Object instance are created with constructor, which are basically special function that prepare new instance of an object for use.
+        </p>
+        
+        <script>
+            function mobile(){
+                this.model = '3310';        // this keyword points the newly created object. It means if we have created an object samsung then this.model means samsung.model.
+                this.price = function (){
+                    document.write(this.model + "Price Rs. 3000");
+                };
+            }
+            
+            var samsung = new mobile();
+            samsung.price();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ES6 Class</title>
+		<style>
+			h1, h2{
+				font-family:arial;
+			}
+			span{
+				font-size:14pt; font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>ES6 Class</h1>
+		<hr>
+		
+		<span>
+			Javascript classes, introduced in ECMAScript 2015 or ES 6, Classes are in fact "special functions".<br>
+			There are two ways to define class in Javascript using class keyword :-
+			<ul>
+				<li>Class declaration</li>
+				<li>Class expression</li>
+			</ul>
+			
+			Syntax: <br>
+			class ClassName { <br>
+				constructor() { ... } <br>
+			} <br>
+			
+			A JavaScript class is not an object.<br>
+			It is a template for JavaScript objects.
+			
+			<h2> class Methods </h2>
+			<span>
+				class ClassName {
+				  constructor() { ... }
+				  method_1() { ... }
+				  method_2() { ... }
+				  method_3() { ... }
+				}
+			</span>
+		</span>
+		
+		
+		<h2> Constructor </h2>	
+		<span>
+			The constructor method is a special method for creating and initializing an object created within a class. There can be only one special method with the name "constructor" in a class.
+		</span><br>
+		
+		<h2> JavaScript </h2>
+		
+		<script>
+			class Car{
+				constructor(name, year){
+					this.name = name;
+					this.year = year;
+				}
+				
+				display(){
+					document.write(this.name + "<br>");
+					document.write(this.year);
+				}
+			}
+			
+			var car1 = new Car("Audi", 1990);
+			car1.display();
+		</script>
+	</body>
+</html>

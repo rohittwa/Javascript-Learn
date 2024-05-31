@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Factory function</title>
+    </head>
+    <body>
+        <h1>Factory function</h1>
+        
+        <p>
+            When a function returns an object, we call it a factory function. It can produce object instance without new keyword or classes. <br>
+            Ex:-<br>
+        </p>
+<pre>
+function mobile(){
+    return {
+        model:'Galaxy',
+        price: function(){return ("Price Rs: 3000");}
+    };
+}
+
+var samsung = mobile();
+document.write(samsung.model + " " + samsung.price());
+</pre>
+        
+        <script>
+            function mobile(model, price, ram, cpu){
+                return {
+                    model:model,
+                    price:price,
+                    ram:ram,
+                    cpu:cpu
+                };
+            }
+            
+            var redmi = mobile('Redmi', 8000, '4GB', '1.3Ghz');
+            document.write('redmi.model : ' + redmi.model + '<br>');
+            document.write('redmi.price : ' + redmi.price + '<br>');
+            document.write('redmi.ram : ' + redmi.ram + '<br>');
+            document.write('redmi.cpu : ' + redmi.cpu + '<br>');
+            
+            var samsung = mobile('Samsung', 10000, '4GB', '1.8Ghz');
+            document.write('samsung.model : ' + samsung.model + '<br>');
+            document.write('samsung.price : ' + samsung.price + '<br>');
+            document.write('samsung.ram : ' + samsung.ram + '<br>');
+            document.write('samsung.cpu : ' + samsung.cpu + '<br>');
+        </script>
+    </body>
+</html>

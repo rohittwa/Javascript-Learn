@@ -1,0 +1,26 @@
+<html>
+    <head>
+        
+    </head>
+    <title>Rest Parameter in function</title>
+    <body>
+        <h1>Rest parameter</h1>
+        
+        The rest parameter allows to represent an idefinite number of arguments as an array. The rest parameter must be the last parameter to a function.<br>
+        Syntax :
+<pre>
+function function_name(...args){    <!-- We can write anything at the place of args -->
+    Block of statement;
+}
+</pre>
+        <script>
+            function names(n1, ...args){
+                document.write(n1 + '<br>');
+                document.write(args);
+                document.write("<br>" + args[2]);
+            }
+            
+            names('Arun', 'Karan', 'Raman', 'Kuldeep');
+        </script>
+    </body>
+</html>

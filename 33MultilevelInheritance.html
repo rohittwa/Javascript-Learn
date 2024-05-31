@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Multilevel inheritance</title>
+	</head>
+	<body>
+		<h1>Multilevel Inheritance</h1>
+		<hr>
+		
+		<p>
+			Multilevel Inheritance means to inherit a derived class.
+		</p>
+		
+		<script>
+			class Home{
+				homeSize;
+				homeFloors;
+				homePrice;
+
+				constructor(hSize, hFloors, hPrice)
+				{
+					this.homeSize=hSize;
+					this.homeFloors=hFloors;
+					this.homePrice=hPrice;
+				}
+			}
+
+			class Hall extends Home{
+				hallSize;
+				hallFurnitures;
+
+				constructor(hSize, hFurnitures)
+				{
+					super(15*60, 2, 3000000);
+
+					this.hallSize=hSize;
+					this.hallFurnitures=hFurnitures;
+				}
+			}
+
+			class Kitchen extends Hall{
+				kitchenSize;
+				kitchenUtensils;
+
+				constructor(kSize, kUtensils){
+					super(12*10, 4);
+
+					this.kitchenSize=kSize;
+					this.kitchenUtensils=kUtensils;
+				}
+
+				show()
+				{
+					document.write("Home Size = " + this.homeSize);
+					document.write("<br>Home Floors = " + this.homeFloors);
+					document.write("<br>Home Price = " + this.homePrice);
+
+					document.write("<br>Hall Size = " + this.hallSize);
+					document.write("<br>Hall Furnitures = " + this.hallFurnitures);
+
+					document.write("<br>Kitchen Size = " + this.kitchenSize);
+					document.write("<br>Kitchen Utensils = " + this.kitchenUtensils);
+				}
+			}
+
+			var k = new Kitchen(8*10, 50);
+			k.show();
+		</script>
+	</body>
+</html>

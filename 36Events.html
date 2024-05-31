@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Events</title>
+	</head>
+	<style>
+		p, ul li, table tr td{
+			font-size:16pt; font-family:arial;
+		}
+		h1, h2{
+			font-family:arial;
+		}
+		div{
+			background-color:#fff06bde; font-family:arial; font-size:16pt; width:930px;
+		}
+	</style>
+	<body>
+		<h1>Events</h1>
+		<hr>
+		
+		<p>
+			HTML events are "things" that happen to HTML elements. <br>
+			When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+		</p>
+		
+		
+		<h2>HTML Events</h2>
+		<p>
+			An HTML event can be something the browser does, or something a user does.<br>
+		</p>
+
+		<p>
+			Here are some examples of HTML events:
+			<ul>
+				<li>An HTML web page has finished loading</li>
+				<li>An HTML input field was changed</li>
+				<li>An HTML button was clicked</li>
+			</ul>
+		</p>
+		
+		<p>
+			Often, when events happen, you may want to do something.<br>
+			JavaScript lets you execute code when events are detected.<br>
+			HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.<br><br>
+			
+			We can use Events with DOM by two methods :-<br>
+			1. document.getElementById("div1").event_name = function_name;<br>
+			2. document.getElementById("div2").addEventListener("event_name", function_name, useCapture);<br>
+			The event_name must be used without the word 'on'. The useCapture value can be true or false.
+			
+			To remove an event from an element:-<br>
+			document.getElementById("div2").removeEventListener("event_name", function_name, useCapture);<br>
+			The arguments in removeEventListener() method must be the same as in addEventListener() method.
+		</p>
+		
+		<p>
+			In the following example, an onclick attribute (with code), is added to a &lt;button&gt; element:<br>
+			<div>
+				&lt;button onclick="document.getElementById('demo').innerHTML = Date()"&gt;The time is?&lt;/button&gt;
+			</div>
+		</p>
+		
+		<h2>Common HTML Events</h2>
+		
+		<p>Here is a list of some common HTML events:</p>
+		<table border="1" cellpadding="13px">
+			<tr>
+				<td><b>Event</b></td>
+				<td><b>Triggers when</b></td>
+			</tr>
+			
+			<tr>
+				<td>onchange</td>
+				<td>An HTML element has been changed and the focus is not at the element</td>
+			</tr>
+			
+			<tr>
+				<td>onclick</td>
+				<td>The user clicks an HTML element</td>
+			</tr>
+			
+			<tr>
+				<td>onblur</td>
+				<td>The user removes the focus from the element</td>
+			</tr>
+			
+			<tr>
+				<td>onkeydown</td>
+				<td>The user pushes a keyboard key</td>
+			</tr>
+			
+			<tr>
+				<td>onkeypress</td>
+				<td>The event occurs when the user pressed a key. It only works with printable characters</td>
+			</tr>
+			
+			<tr>
+				<td>onkeyup</td>
+				<td>The event occurs when the key is released.</td>
+			</tr>
+			
+			<tr>
+				<td>onselect</td>
+				<td>The user selects the text inside the textbox.</td>
+			</tr>
+			
+			<tr>
+				<td>oninvalid</td>
+				<td>The user has input the wrong value or has not given a value.</td>
+			</tr>
+			
+			<tr>
+				<td>onkeyup</td>
+				<td>The event occurs when the user releases a key</td>
+			</tr>
+			
+			<tr>
+				<td>oninput</td>
+				<td>The event occurs when an element gets user input</td>
+			</tr>
+			
+			<tr>
+				<td>oncontextmenu</td>
+				<td>The event occurs when the user right-clicks on an element to open a context menu</td>
+			</tr>
+			
+			<tr>
+				<td>ondblclick</td>
+				<td>The event occurs when the user double-clicks on an element</td>
+			</tr>
+			
+			<tr>
+				<td>onmouseover</td>
+				<td>The user moves the mouse over an HTML element</td>
+			</tr>
+			
+			<tr>
+				<td>onmouseout</td>
+				<td>The user moves the mouse away from an HTML element</td>
+			</tr>
+			
+			<tr>
+				<td>onmousedown</td>
+				<td>The event occurs when the user presses a mouse left button over an element</td>
+			</tr>
+			
+			<tr>
+				<td>onmouseenter</td>
+				<td>The event occurs when the pointer is moved onto an element. No bubble</td>
+			</tr>
+			
+			<tr>
+				<td>onmouseleave</td>
+				<td>The event occurs when the pointer is moved out of an element. No bubble</td>
+			</tr>
+			
+			<tr>
+				<td>onmousemove</td>
+				<td>The event occurs when the pointer is moving while it is over an element</td>
+			</tr>
+			
+			<tr>
+				<td>onmouseover</td>
+				<td>The event occurs when the pointer is moved onto an element, or onto one of its children</td>
+			</tr>
+			
+			<tr>
+				<td>onmouseout</td>
+				<td>The event occurs when a user moves the mouse pointer out of an element, or out of one of its children</td>
+			</tr>
+	
+			<tr>
+				<td>onmouseup</td>
+				<td>The event occurs when a user releases a mouse button over an element</td>
+			</tr>
+			
+			<tr>
+				<td>onwheel</td>
+				<td>The event occurs when the mouse wheel rolls up or down over an element</td>
+			</tr>
+			
+			<tr>
+				<td>offline</td>
+				<td>The event occurs when the browser starts to work offline</td>
+			</tr>
+			
+			<tr>
+				<td>online</td>
+				<td>The event occurs when the browser starts to work online</td>
+			</tr>
+			
+			<tr>
+				<td>onsubmit</td>
+				<td>The event occurs when a form is submitted</td>
+			</tr>
+			
+			<tr>
+				<td>onload</td>
+				<td>The event occurs when a page has finished loading</td>
+			</tr>
+			
+			<tr>
+				<td>onunload</td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td>onresize</td>
+				<td>The event occurs when the window is resized</td>
+			</tr>
+			
+			<tr>
+				<td>onscroll</td>
+				<td>The event occurs when the document is scrolled</td>
+			</tr>
+			
+			<tr>
+				<td>onfocus</td>
+				<td>The event occurs when an element gains focus, such as selecting a form field. No Bubble</td>
+			</tr>
+			
+			<tr>
+				<td>onblur</td>
+				<td>The event occurs when an element loses focus, such as moving away from a form field. No Bubble</td>
+			</tr>
+			
+			<tr>
+				<td>focusin</td>
+				<td>The event occurs when an element is just about to gain focus</td>
+			</tr>
+			
+			<tr>
+				<td>focusout</td>
+				<td>The event occurs when an element is just about to lose focus</td>
+			</tr>
+		</table>
+	</body>
+</html>

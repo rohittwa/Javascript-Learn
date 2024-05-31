@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Operator precedence</title>
+	</head>
+	<style>
+		h1{
+			text-align:center; font-family:arial; color:forestgreen;
+		}
+	
+		table tr td, b{
+			font-size:15pt; font-family:arial;
+		}
+	</style>
+	<body>
+		<h1>Operator precedence</h1>
+		<hr>
+		
+		<b>Precedence Of operators : </b> <br><br>
+
+		<table border="1" cellpadding="15px">
+			<tr>
+				<td style="text-align:center;"> <b>Value</b> </td>
+				<td style="text-align:center;"> <b>Operator</b> </td>
+				<td style="text-align:center;"> <b>Meaning</b> </td>
+				<td style="text-align:center;"> <b>Example</b> </td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 20. </td>
+				<td> () </td>
+				<td> Expression grouping </td>
+				<td> (3+4) </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 19. </td>
+				<td> . </td>
+				<td> Member </td>
+				<td> person.name</td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 19. </td>
+				<td> [] </td>
+				<td> Member </td>
+				<td> person["name"] </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 19. </td>
+				<td> () </td>
+				<td> Function call </td>
+				<td> myFunction() </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 19. </td>
+				<td> new </td>
+				<td> Create </td>
+				<td> new Date() </td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 19. </td>
+				<td> ++ </td>
+				<td> Postfix Increment </td>
+				<td> i++ </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 18. </td>
+				<td> -- </td>
+				<td> Postfix Decrement </td>
+				<td> i-- </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 17. </td>
+				<td> ++ </td>
+				<td> Prefix Increment </td>
+				<td> ++i </td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 17. </td>
+				<td> -- </td>
+				<td> Prefix Decrement </td>
+				<td> --i </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 17. </td>
+				<td> ! </td>
+				<td> Logical Not </td>
+				<td> !(x==y) </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 17. </td>
+				<td> typeof </td>
+				<td> Type </td>
+				<td> typeof(x) </td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 16. </td>
+				<td> ** </td>
+				<td> Exponentiation </td>
+				<td> 10**2 </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 15. </td>
+				<td> * </td>
+				<td> Multiplication </td>
+				<td> 10*4 </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 15. </td>
+				<td> / </td>
+				<td> Division </td>
+				<td> 10/4</td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 15. </td>
+				<td> % </td>
+				<td> Division remainder </td>
+				<td> 10%4 </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 14. </td>
+				<td> + </td>
+				<td> Addition </td>
+				<td> 2+5 </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 14. </td>
+				<td> - </td>
+				<td> Subtraction </td>
+				<td> 2-5 </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 13. </td>
+				<td> &lt;&lt; </td>
+				<td> Left shift </td>
+				<td> x&lt;&lt;2 </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 13. </td>
+				<td> &gt;&gt; </td>
+				<td> Right shift </td>
+				<td> x&gt;&gt;2 </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 13. </td>
+				<td> &gt;&gt;&gt; </td>
+				<td> Right shift unsigned </td>
+				<td> x&gt;&gt;&gt;2 </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 12. </td>
+				<td> &lt; </td>
+				<td> Less than </td>
+				<td> x&lt;y </td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 12. </td>
+				<td> &lt;= </td>
+				<td> Less than or equal </td>
+				<td> x&lt;=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 12. </td>
+				<td> &gt;= </td>
+				<td> Greater than or equal </td>
+				<td> x&gt;=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 12. </td>
+				<td> in </td>
+				<td> Property in object </td>
+				<td> "PI" in Math </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 12. </td>
+				<td> instanceOf </td>
+				<td> Instance of  object </td>
+				<td> instanceOf Array </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 11. </td>
+				<td> == </td>
+				<td> Equal </td>
+				<td> x == y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 11. </td>
+				<td> === </td>
+				<td> Strict Equal </td>
+				<td> x === y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 11. </td>
+				<td> != </td>
+				<td> Not Equal </td>
+				<td> x != y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 11. </td>
+				<td> !== </td>
+				<td> Strict Not Equal </td>
+				<td> x !== y </td>
+			</tr>
+
+			<tr>
+				<td style="text-align: center;"> 11. </td>
+				<td> and </td>
+				<td> Logical AND </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 10. </td>
+				<td> & </td>
+				<td> Bitwise AND </td>
+				<td> 5&3 </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 9. </td>
+				<td> ^ </td>
+				<td> Bitwise XOR </td>
+				<td> 5^3 </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 8. </td>
+				<td> | </td>
+				<td> Bitwise Or </td>
+				<td> 5|3 </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;">7.</td>
+				<td> && </td>
+				<td> Logical && </td>
+				<td> x&&y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 6. </td>
+				<td> || </td>
+				<td> Logical OR </td>
+				<td> x||y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 5. </td>
+				<td> ?? </td>
+				<td> Nullish coalescing </td>
+				<td> x??y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;">4.</td>
+				<td> ?: </td>
+				<td> Condition </td>
+				<td>?"Yes":"No"</td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;">3.</td>
+				<td>+=</td>
+				<td> Assignment </td>
+				<td> x+=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;">3.</td>
+				<td> /= </td>
+				<td> Assignment </td>
+				<td> x/=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> -= </td>
+				<td> Assignment </td>
+				<td> x-=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> *= </td>
+				<td> Assignment </td>
+				<td> x*=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;">3.</td>
+				<td> %= </td>
+				<td> Assignment </td>
+				<td> x%=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> &lt;&lt;= </td>
+				<td> Assignment </td>
+				<td> x&lt;&lt;y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> &gt;&gt;= </td>
+				<td> Assignment </td>
+				<td> x&gt;&gt;=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> &gt;&gt;&gt;= </td>
+				<td> Assignment </td>
+				<td> x&gt;&gt;&gt;=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> &= </td>
+				<td> Assignment </td>
+				<td> x&=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> ^= </td>
+				<td> Assignment </td>
+				<td> x^=y </td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 3. </td>
+				<td> |= </td>
+				<td> Assignment </td>
+				<td> x|=y </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 2. </td>
+				<td> yield </td>
+				<td> Pause function </td>
+				<td> yield x </td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td style="text-align: center;"> 1. </td>
+				<td> , </td>
+				<td> Comma </td>
+				<td> 5,6 </td>
+			</tr>
+		</table>
+	</body>
+</html>

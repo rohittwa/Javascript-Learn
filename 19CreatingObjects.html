@@ -1,0 +1,45 @@
+<html>
+    <head>
+    
+    </head>
+    <title>Creating objects</title>
+    <body>
+        <h1>Creating objects</h1>
+        
+        <script>
+            var fees = {};
+            fees.Rahul = 100;
+            fees["Samson"] = 200;
+            fees.Rohan = 210;
+			fees["ravi thakur"] = 220;					// We cann't use this property with (.) operator.
+			fees.total = function (){					// This is a method.
+				return this.Rahul+this.Samson+this["ravi thakur"];
+			};
+			
+			document.write(fees.Rahul + "<br>");
+			document.write(fees.Samson + "<br>");
+			document.write(fees.Rohan + "<br>");
+			document.write(fees["ravi thakur"] + "<br>");
+			document.write(fees.total() + "<br>");
+			// The names of properties and methods are case sensitive.
+			
+			var engMarks = {
+				aman:68,
+				arun:75,
+				aryan:83,
+				ankit:68,
+				"super man":90,
+				total: function() {
+					return (this.aman+this.arun+this.aryan+this.ankit);
+				}
+			};
+			
+            document.write("<br>");
+			document.write(engMarks.aman + "<br>");
+			document.write(engMarks.arun + "<br>");
+			document.write(engMarks.aryan + "<br>");
+			document.write(engMarks["super man"] + "<br>");
+			document.write("engMarks.total() = " + engMarks.total());
+        </script>
+    </body>
+</html>

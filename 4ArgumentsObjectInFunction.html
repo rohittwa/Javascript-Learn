@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Arguments object in Function</title>
+    </head>
+    <body>
+        <script>
+            function add(a, b){
+                c = a+b;
+                document.write('c = ' + c + '<br>');
+                
+                document.write('a = ' + arguments[0] + '<br>');
+                document.write('b = ' + arguments[1] + '<br>');
+                document.write(arguments.length + '<br>');
+                
+                for(var i=0; i<arguments.length; i++){
+                    document.write(arguments[i] + '<br>');
+                }
+            }
+            
+            add(5, 7, 'Ravi', 'Karan');
+        </script>
+        <br>
+        <p>The arguments object contains an array of the arguments used when the function is  called. This object contains an entry for each argument passed to the function, the first entry's index starting at 0. The arguments object is not an Array. It is similar to an Array, but doesn't have any Array properties except length.</p>
+        
+        <p>We can also call the function declaration at the above of its declaration.</p>
+    </body>
+</html>

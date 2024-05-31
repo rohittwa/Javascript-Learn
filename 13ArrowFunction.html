@@ -1,0 +1,30 @@
+<html>
+    <head>
+        
+    </head>
+    <title>Arrow function</title>
+    <body>
+        <h1>Arrow function</h1>
+        
+        <p>An arrow function expression (previously, and now incorrectly known as fat arrow function) has a shorter syntax compared to function expressions. Arrow functions are always anonymous.<br>
+        Syntax:-<br>
+        () => {statements};<br><br>
+        
+        Ex:-<br>
+        var myfun = ()=>{document.write('Geekyshows');};
+        </p>
+        
+        <script>
+            var myfun = () => {
+                document.write('Hi everyone' + "<br>");
+            };
+            
+            var myfun2 = a => { // When we pass only one argument to the arrow function we can omit the parentheses.
+                document.write(a);
+            };
+            
+            myfun();
+            myfun2('Kuldeep');
+        </script>
+    </body>
+</html>

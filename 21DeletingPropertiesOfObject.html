@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Deleting properties of object</title>
+    </head>
+    <body>
+        <h1>Deleting properties of object</h1>
+        
+        <script>
+            var fees = {
+                Rahul:100,
+                Simran:200
+            };
+            
+            document.write('fees.Rahul : ' + fees.Rahul + '<br>');
+            document.write('fees.Simran : ' + fees.Simran + '<br>');
+            
+            delete fees.Simran;         // After deleting a property if we access its value then it will be undefined.
+            document.write('fees.Simran : ' + fees.Simran + '<br>');
+            document.write('fees.rat : ' + fees.rat);
+        </script>
+    </body>
+</html>
