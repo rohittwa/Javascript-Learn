@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DOM token list </title>
+	</head>
+	<body>
+		<h1> DOM token list </h1>
+		<hr>
+		
+		<p>
+			The DOM token list interface represents a set of space-separated tokens. Such a set is returned by Element.classList, HTMLLinkElement.relList, HTMLAreaElement.relList, HTMLframeElement.sandbox, or HTMLOutputElement.htmlFor. etc. It is indexed 	beginning with 0 as with Javascript Array objects. DOMTokenList is always case-sensitive.
+		</p>
+		
+		Properties in DOMTokenList :-
+		<ul id="p" class="prop DTLp">
+			<li> length </li>
+			<li> value </li>
+		</ul>
+		
+		Methods in DOMTokenList :-
+		<ul>
+			<li> item() : It returns a class which is at specified index.</li>
+			<li> add() </li>
+			<li> remove() </li>
+			<li> replace() </li>
+			<li> contains() </li>
+			<li> toggle() </li>
+		</ul>
+		
+		<script>
+			var ul1 = document.querySelector("#p");
+			var ul1Classes = ul1.classList;
+			console.log(ul1Classes);
+			console.log(ul1Classes[1]);
+			console.log(ul1Classes.length);
+			console.log(ul1Classes[0].length);
+			console.log(ul1Classes.value);
+			console.log(ul1Classes.item(1));
+			
+			ul1Classes.add("prop2", "prop3");				// We can also add multiple classes.
+			console.log(ul1Classes.value);
+			
+			ul1Classes.remove("prop3");
+			console.log(ul1Classes.value);
+			
+			ul1Classes.replace("prop2", "prop3");	// Syntax : elementNode.replace(oldElement, newElement);
+			console.log(ul1Classes.value);
+			
+			console.log(ul1Classes.contains("prop3"));
+			
+			ul1Classes.toggle("prop4");				// If the new class exists in the element then it gets remove, but if it doesn't exist it gets added.
+			console.log(ul1Classes.value);
+		</script>
+	</body>
+</html>

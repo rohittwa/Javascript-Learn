@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Window Location object </title>
+		<style>
+			h1{
+				font-family:arial;
+			}
+			td, p, body{
+				font-famil:arial; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> It scrolls the window from absolute position. </h1>
+		<hr>
+		
+		<p>
+			The location object contains information about the current URL.<br>
+			The location object is a property of the window object.<br><br>
+			The location object is accessed with:<br>
+			window.location or just location
+		</p>
+		
+		Location object properties:
+		<table border="1" cellpadding="15">
+			<tr>
+				<td> <b>Property</b> </td>
+				<td> <b>Description</b> </td>
+			</tr>
+			
+			<tr>
+				<td> hash </td>
+				<td> Sets or returns the anchor part (#) of a URL </td>
+			</tr>
+			
+			<tr>
+				<td> host </td>
+				<td> Sets or returns the hostname and port number of a URL </td>
+			</tr>
+			
+			<tr>
+				<td> hostname </td>
+				<td> Sets or returns the hostname of a URL </td>
+			</tr>
+			
+			<tr>
+				<td> href </td>
+				<td> Sets or returns the entire URL </td>
+			</tr>
+			
+			<tr>
+				<td> origin </td>
+				<td> Returns the protocol, hostname and port number of a URL </td>
+			</tr>
+			
+			<tr>
+				<td> pathname </td>
+				<td> Sets or returns the path name of a URL </td>
+			</tr>
+			
+			<tr>
+				<td> port </td>
+				<td> Sets or returns the port number of a URL </td>
+			</tr>
+			
+			<tr>
+				<td> protocol </td>
+				<td> Sets or returns the protocol of a URL </td>
+			</tr>
+			
+			<tr>
+				<td> search </td>
+				<td> Sets or returns the querystring part of a URL </td>
+			</tr>
+		</table><br><br>
+		
+		Location object methods :
+		<table border="1" cellpadding="15">
+			<tr>
+				<td> <b>Method</b> </td>
+				<td> <b>Description</b> </td>
+			</tr>
+			
+			<tr>
+				<td> assign() </td>
+				<td> Loads a new document </td>
+			</tr>
+			
+			<tr>
+				<td> reload() </td>
+				<td> Reloads the current document </td>
+			</tr>
+			
+			<tr>
+				<td> replace() </td>
+				<td> Replaces the current document with a new one </td>
+			</tr>
+		</table>
+		
+		<script>
+			document.write("location.hash : " + location.hash + "<br>");
+			document.write("location.host : " + location.host + "<br>");
+			document.write("location.hostname : " + location.hostname + "<br>");
+			document.write("location.href : " + location.href + "<br>");
+			document.write("location.origin : " + location.origin + "<br>");
+			document.write("location.pathname : " + location.pathname + "<br>");
+			document.write("location.port : " + location.port + "<br>");
+			document.write("location.protocol : " + location.protocol + "<br>");
+			document.write("location.search : " + location.search + "<br>");
+			
+			//document.write("location.assign() : " + location.assign() + "<br>");
+			//document.write("location.reload() : " + location.reload() + "<br>");
+			//document.write("location.replace() : " + location.replace() + "<br>");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Class Inheritance </title>
+		<style>
+			h1, h2{
+				font-family:arial;
+			}
+			
+			p{
+				font-size:14pt; font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Class inheritance </h1>
+		<hr>
+		
+		<p>
+			The extends keyword is used in class declarations and class expressions to create a class which is the child of another class.<br>
+			The extends class can be used to subclass custom classes as well as built-in objects.<br>
+			Example:<br>
+			class Father{<br><br>
+				
+			}<br>
+			class Child extends Father{<br><br>
+			
+			}
+		</p>
+		
+		<script>
+			class Father{
+				showFMoney(){
+					return 5000;
+				}
+			}
+			class Son extends Father{
+				showSMoney(){
+					return 4000;
+				}
+			}
+			
+			var s = new Son();
+			document.write(s.showFMoney() + "<br>");
+			document.write(s.showSMoney() + "<br>");
+		</script>
+	</body>
+</html>

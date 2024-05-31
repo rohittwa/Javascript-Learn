@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Window open & close method </title>
+		<style>
+			h1{
+				font-family:arial;
+			}
+			
+			span{
+				font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Window open & close method </h1>
+		<hr>
+		
+		<span>
+			<b> 1. open(URL, name, specs) : </b> This method is used to open a window.
+			<ul>
+				<li> URL : Path of the file with protocol. </li>
+				<li> name : The name can be any name or
+					<ol type="i">
+						<li> _blank : Opens the window in new tab.</li>
+						<li> _parent : Opens the window at the place of existing tab.</li>
+						<li> _self : </li>
+						<li> _top : </li>
+					</ol>
+				</li>
+				<li> specs : We can define all the values of the window from following :
+					<ol type="i">
+						<li> Width </li>
+						<li> Height </li>
+						<li> Left </li>
+						<li> Top </li>
+					</ol>
+				</li>
+			</ul>
+			
+			<b> 2. close() : </b> This method is used to close a window.
+		</span>
+		
+		<br><br>
+		
+		<button onclick="openPend()"> Open window </button>
+		
+		<script>
+			function openPend(){
+				window.open("https://www.w3schools.com", "_blank", "width=600px, height=400px, top=200px, left=300px");
+			}
+		</script>
+	</body>
+</html>

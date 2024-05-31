@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Modifying Text Nodes </title>
+		<style>
+			body{
+				font-family:arial; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Modifying Text Nodes </h1>
+		<hr>
+		
+		Properties:
+		<ul>
+			<li> Data </li>
+			<li> Length </li>
+		</ul>
+		
+		Methods:
+		<ul>
+			<li> appendData(String) : data property is used to get or set the text in a textNode and commentNode.</li>
+			<li> deleteData(start, length) : length property is used to get the length of the text in a textNode and commentNode.</li>
+			<li> insertData(start, string) : It appends the given string at a specified index of a textNode and commentNode.</li>
+			<li> replaceData(start, length, string) : Used to replace the data from a specified position.</li>
+			<li> splitText(start) : Used to split a texNode and commentNode from a specified index to end.</li>
+			<li> substringData(start, length) </li>
+		</ul>
+		
+		<p>
+			Hello World! My name is Rohit. I am 19 years old.
+		</p>
+		
+		<script>
+			var t = document.querySelector("p");
+			console.log(t.childNodes[0].data);
+			console.log(t.childNodes[0].length);
+			
+			t.childNodes[0].appendData(" My hobby is to play and watch cricket.");
+			
+			t.childNodes[0].deleteData(0,7);
+			
+			t.childNodes[0].insertData(4, "Bye bye");
+			
+			t.normalize();
+			t.childNodes[0].replaceData(5, 9, "HuuuHaHaHaHa");
+			
+			console.log(t.childNodes[0].splitText(5));
+			
+			t.normalize();
+			console.log(t.childNodes[0].substringData(2, 10));
+		</script>
+	</body>
+</html>

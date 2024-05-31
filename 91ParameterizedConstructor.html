@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Parameterized Constructor </title>
+		<style>
+			h1, h2{
+				font-family:arial;
+			}
+			
+			p{
+				font-size:14pt; font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Parameterized Constructor </h1>
+		<hr>
+		
+		<p>
+			The constructor which has parameter is called parameterized constructor.
+		</p>
+		
+		<h2> Javascript </h2>
+	
+		<script>
+			class Mobile{
+				constructor(mName){
+					this.name = mName;
+					this.show = function(){
+						document.write(this.name);
+					};
+				}
+			}
+			
+			var m = new Mobile("Poco");
+			m.show();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> MoveBy & MoveTo methods </title>
+		<style>
+			span{
+				font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> MoveBy & MoveTo methods </h1>
+		<hr>
+		
+		<span>
+			<ol>
+				<li> <b>moveTo(x, y) :</b> Used to move the window without any url and it moves the window from absolute position. x is width and y is height.</li>
+				
+				<li> <b>moveBy(x, y) :</b> Used to move the window without any url and it moves the window from relative position. x is width and y is height.</li>
+			</ol>
+		</span>
+		
+		<button onclick="openWin()"> Open window </button><br><br>
+		<button onclick="moveWin()"> Move window </button> <br><br>
+		<button onclick="moveWinR()"> Move window relative</button>
+		
+		<script>
+			var openWin;
+			function openWin(){
+				openWin = window.open("", "", "width=600px, height=300px, left=200px, top=200px");
+				openWin.document.write("This is a new window.");
+				openWin.focus();
+			}
+			
+			function moveWin(){
+				openWin.moveTo(300, 300);
+				openWin.focus();
+			}
+			
+			function moveWinR(){
+				openWin.moveBy(300, 300);
+				openWin.focus();
+			}
+		</script>
+	</body>
+</html>

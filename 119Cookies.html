@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Cookies </title>
+		<style>
+			h1{
+				font-family:arial;
+			}
+			
+			p{
+				font-family:tahoma; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Cookies </h1>
+		<hr>
+		
+		<p>
+			Cookies are exposed as the cookie object of the Document object. This property is both readable and writable.<br>
+			
+			When you assign a string to document.cookie, the browser parses it as a cookie and adds it to its list of cookies. There are several parts to each cookies, many of them optional.<br>
+			
+			Syntax:-<br>
+			document.cookie = "name=value";<br>
+			document.cookie = "name=value; expires=date; domain=domain; path=path; secure";<br>
+			document.cookie = "name=value; max-age=inSeconds; domain=domain; path=path; secure";<br><br>
+			
+			Ex:-<br>
+			document.cookie = "username=geeky";
+			document.cookie = "username=geeky; expires=Monday, 3-Sep-2022 09:00:00 UTC";<br><br>
+			
+			Note: name-value pair must not contain any white-space character, commas or semicolons.
+		</p>
+		
+		<script>
+			document.cookie = "username=Geeky";
+			var c = document.cookie;
+			console.log(c);
+			console.dir(navigator);
+		</script>
+	</body>
+</html>

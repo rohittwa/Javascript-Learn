@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Outer Text </title>
+	</head>
+	<body>
+		<h1> outerText property </h1>
+		<hr>
+		
+		<p>
+			outerText property works similarly to the outerHTML property, modifies the element itself, and replace it with a single text node. This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web : it will not work for every user.
+		</p>
+		
+		<div id="d1">
+			<p> This is a paragraph. </p>
+		</div>
+		
+		<script>
+			var d1 = document.querySelector("#d1");
+			d1.outerText = "This text is written using outerText property.";
+		</script>
+	</body>
+</html>

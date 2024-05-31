@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Window height & width properties </title>
+	</head>
+	<body onload="resizeVal()" onresize="resizeVal()">
+		<h1> Window height & width properties </h1>
+		<hr>
+		
+		<div id="d1"></div>
+		
+		<script>
+			function resizeVal(){
+				var iHeight = window.innerHeight;
+				var oHeight = window.outerHeight;
+				// outer height counts the height of document and other height ignoring the height of URL.
+				var iWidth = window.innerWidth;
+				// inner width counts the width of document.
+				var oWidth = window.outerWidth;
+				// outer width counts the width of document including height of inspect window.
+				
+				document.querySelector("#d1").innerHTML = "Inner heigth = " + iHeight + "<br>Outer height = " +  oHeight + "<br>Inner width = " + iWidth + "<br>Outer width = " + oWidth;
+			}
+		</script>
+	</body>
+</html>

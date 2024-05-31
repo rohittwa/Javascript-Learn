@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Method overriding in class </title>
+		<style>
+			h1, h2{
+				font-family:arial;
+			}
+			
+			p{
+				font-size:14pt; font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Method overriding in class </h1>
+		<hr>
+		
+		<p>
+			Method overriding means to create a method in subclass with the same name as in super class and with different behavior.
+		</p>
+		
+		<script>
+			class Father{
+				show(){
+					return "Super class";
+				}
+			}
+			
+			class Son extends Father{
+				show(){
+					return "Sub class";
+				}
+			}
+			
+			var s = new Son();
+			document.write(s.show());
+		</script>
+	</body>
+</html>

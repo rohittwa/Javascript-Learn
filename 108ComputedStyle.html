@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Computed style </title>
+		<style>
+			h1{
+				font-family:arial; font-style:italic;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Computed style </h1>
+		<hr>
+		
+		<p>
+			Computed style is the inline style of the element which is applied to the element. We can read-only the properties of css with getComputedStyle() method.
+		</p>
+		
+		<script>
+			var h1 = document.querySelector("h1");
+			console.log(window.getComputedStyle(h1));
+			console.log(window.getComputedStyle(h1).fontStyle);
+			console.log(window.getComputedStyle(h1).backgroundColor);
+			console.log(window.getComputedStyle(h1).cursor);
+		</script>
+	</body>
+</html>

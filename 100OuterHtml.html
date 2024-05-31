@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Outer html </title>
+	</head>
+	<body>
+		<h1> Outer html </h1>
+		<hr>
+		
+		<div id="d1"></div>
+		
+		<div id="d2" class="cld2">
+			<p> This is a text </p>
+		</div>
+		
+		<script>
+			var d1 = document.querySelector("#d1");
+			d1.outerHTML = "<p> We can get and set the outer html and inner html with outerHTML property. </p>";
+			console.log(d1.outerHTML);
+			
+			var d2 = document.querySelector("#d2");
+			console.log(d2.outerHTML);
+			
+			console.log(d2.id);
+			console.log(d2.className);
+			d2.title = "myDiv";
+		</script>
+	</body>
+</html>

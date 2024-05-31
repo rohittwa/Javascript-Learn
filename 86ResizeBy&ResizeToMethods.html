@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> ResizeBy & ResizeTo methods </title>
+	</head>
+	<body>
+		<h1> ResizeBy & ResizeTo methods </h1>
+		<hr>
+		
+		<span>
+			<ol>
+				<li> <b>resizeBy(x, y) : </b>Sets the window size to x pixels by y pixels. x is width and y is height.  </li>
+				<li> <b>resizeTo(x, y) : </b>Sets the window size to real size + given size. x is width and y is height.  </li>
+			</ol>
+		</span>
+		
+		<button onclick="openWin()"> Open window </button><br>
+		<button onclick="resizeToWin()"> ResizeTo window </button>
+		<button onclick="resizeByWin()"> ResizeBy window </button>
+		
+		<script>
+			var openWind;
+			
+			function openWin(){
+				openWind = window.open("", "", "width=300px, height=160px");
+				//openWind.focus();
+			}
+			
+			function resizeToWin(){
+				openWind = window.resizeTo(500, 300);
+				//openWind.focus();
+			}
+			
+			function resizeByWin(){
+				openWind = window.resizeBy(500, 300);
+				//openWind.focus();
+			}
+		</script>
+	</body>
+</html>

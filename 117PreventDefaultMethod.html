@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Prevent default method </title>
+	</head>
+	<body>
+		<h1> preventDefault() method </h1>
+		<hr>
+		
+		<a href="https://www.geeksforgeeks.org/" id="link">Geeks For Geeks</a>
+		
+		<script>
+			function pd(e){
+				e.preventDefault();
+			}
+			
+			document.querySelector("#link").addEventListener("click", pd, false);
+		</script>
+	</body>
+</html>

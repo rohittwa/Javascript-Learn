@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Normalize method </title>
+	</head>
+	<body>
+		<h1> Normalize method </h1>
+		<hr>
+		
+		<div id="d1">
+			<h2> This is a h2 element. </h2>
+		</div>
+		
+		<script>
+			var t = document.querySelector("#d1");
+			var text1 = document.createTextNode("This is text1");
+			var text2 = document.createTextNode("This is text2");
+			t.appendChild(text1);
+			t.appendChild(text2);
+			
+			console.log(t.childNodes);
+			
+			t.normalize();
+			console.log(t.childNodes);
+		</script>
+	</body>
+</html>

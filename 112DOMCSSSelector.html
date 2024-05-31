@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DOM CSS Selector </title>
+		<style>
+			.p1{
+				border:1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> DOM CSS Selector </h1>
+		<hr>
+		
+		<p class="p1"> Paragraph 1 </p>
+		<div class="p1" title="div1" width="200px" height="3000">Div 1</div>
+		<p class="p1 p2"> Paragraph 2 </p>
+		<div class="d2"> Div 2 </div>
+		<div class="p1" title="div3 div3_1" width="200px" height="3000">Div 3</div>
+		
+		<ul id="ul1">
+			<li> Apple </li>
+			<li> Mango </li>
+			<li> Banana </li>
+		</ul>
+		
+		<script>
+			// If we have to search a class in a specific tag then we can do following:
+			document.querySelector("p.p1").textContent += "Hello";
+			document.querySelector("p.p1.p2").textContent += "Hello";	// Selects the element which have class p1 and p2.
+			
+			// If we have to select a tag which have specific attribute then we can do following:
+			document.querySelector("div[title]").textContent += " New Text";
+			console.log(document.querySelector("div[title='div1']").textContent);
+			console.log(document.querySelector("div[title='div1'][width='200px']").textContent);
+			
+			console.log(document.querySelectorAll("[title~='div3']").textContent);	// ~ is tilde sign. It selects the element which have a title div3 from multiple titles.
+			
+			console.log(document.querySelectorAll("[title|='div1']"));		// It selects the elements which have title starting from div. The given word should be found alone or with a '-' sign and it must at the starting. | is pipe sign.
+			
+			console.log(document.querySelectorAll("[title^='div']"));		// ^ is caret sign. It selects all the elements in which the value of attributes are starting from the given word also when there are multiple values.
+			
+			console.log(document.querySelectorAll("[class$='p2']"));		// It returns the element whose attribute's value at the end is given word.
+			
+			console.log("[class*='p']");
+			console.log(document.querySelectorAll("[class*='p']"));		// It returns the element whose attribute's value matches with the given word.
+			
+			console.log(document.querySelector("ul:first-child"));
+		</script>
+	</body>
+</html>

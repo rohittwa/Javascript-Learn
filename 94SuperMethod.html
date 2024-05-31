@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Super method </title>
+		<style>
+			h1, h2{
+				font-family:arial;
+			}
+			
+			p{
+				font-size:14pt; font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Super method </h1>
+		<hr>
+		
+		<p>
+			Super method is used to initialize the parent class constructor. If there is a constructor present in subclass, it needs to first call super() before using "this". A constructor can use the super keyword to call the constructor of a parent class.
+		</p>
+		
+		<script>
+			class Father{
+				constructor(){
+					this.fMoney = 5000;
+				}
+			}
+			
+			class Son extends Father{
+				constructor(){
+					super();
+					this.sMoney = 4000;
+				}
+			}
+			
+			var s = new Son();
+			document.write(s.fMoney + "<br>");
+			document.write(s.sMoney + "<br>");
+		</script>
+	</body>
+</html>

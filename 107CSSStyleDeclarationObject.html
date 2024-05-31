@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> CSS Style Declaration Object </title>
+		<style>
+			h1{
+				font-family:arial;
+			}
+			p, body, li{
+				font-family:tahoma; font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> CSS Style Declaration Object </h1>
+		<hr>
+		
+		<p>
+			The CSSStyleDeclaration object represents a collection of CSS property-value pairs. It is used in API:
+			<ul>
+				<li> HTMLElement.style </li>
+				<li> window.getComputedStyle() </li>
+			</ul>
+		</p>
+		
+		Properties:
+		<ul>
+			<li> cssText : It is used to give style to an element. It overrides the style which we have given in the style tag. </li>
+			<li> length : It shows the number of style properties defined for the element by using cssText.</li>
+			<li> parentRule </li>
+		</ul>
+		
+		Methods:
+		<ul>
+			<li> getPropertyValue(property) : It gives the value of specified css style property.</li>
+			<li> getPropertyPriority(property) </li>
+			<li> removeProperty(property) </li>
+			<li> setProperty(property, value, priority) </li>
+			<li> item(index) </li>
+		</ul>
+		
+		<script>
+			console.log(document.querySelector("h1").style);
+			
+			var h1 = document.querySelector("h1");
+			h1.style.cssText = "color:blue; text-decoration:underline;";
+			
+			console.log(h1.style.length);
+			
+			console.log(h1.style.parentRule);
+			
+			console.log(h1.style.item(4));
+			
+			console.log(h1.style[4]);
+			
+			console.log(h1.style.getPropertyValue("text-decoration-line"));
+			
+			console.log(h1.style.getPropertyPriority("text-decoration-line"));
+			
+			h1.style.setProperty("text-decoration-color", "red", "important");
+			h1.style.setProperty("text-decoration-style", "dotted", "important");
+		
+		</script>
+	</body>
+</html>

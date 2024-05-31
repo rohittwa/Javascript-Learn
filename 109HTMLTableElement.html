@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> HTML Table Element </title>
+		<style>
+			h1{
+				font-family:arial;
+			}
+			
+			body{
+				font-size:14pt; font-family:tahoma;
+			}
+			
+			table, th{
+				border:1px solid red; border-spacing:0px; text-align:center;
+			}
+			
+			li{
+				line-height:30px;
+			}
+			
+			td{
+				border-right:1px solid red; text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> HTML Table Element </h1>
+		<hr>
+		
+		<p>
+			HTMLTableElement interface provides special properties and for manipulating the layout and presentation of tables in an HTML document.
+		</p>
+		
+		Properties:
+		<ul>
+			<li> caption : This property represents the table caption. If no caption element is associated with the table, it can be null. </li>
+			<li> tHead : This property represents the table's &lt;thead&gt; element. Its value can be null if there is no such element. </li>
+			<li> tFoot : This property represents the table's &lt;tfoot&gt; element. Its value can be null if there is no such element. </li>
+			<li> rows : This property returns a live collection of all the rows in the table, including the rows contiaing within any &lt;thead&gt;, &lt;tfoot&gt; and &lt;tbody&gt; elements. Although the property itself is read-only, the returned object is live and allows the modification of the content.</li>
+			<li> tBodies : This read-only property returns a live HTMLCollection of the table bodies. Although the property is read-only, the returned object is live and allows the modification of its content.</li>
+		</ul>
+		
+		Methods:
+		<ul>
+			<li> createCaption() : If the caption exists then it returns the caption else it creates the emtpy caption.</li>
+			<li> deleteCaption() : It removes the caption.</li>
+			<li> createTHead() : If the &lt;thead&gt; exists then it returns the &lt;thead&gt; else it creates the emtpy &lt;thead&gt;.</li>
+			<li> deleteTHead() : It removes the thead. </li>
+			<li> createTFoot() : If the tfoot exists then it returns the tfoot else it creates the emtpy tfoot.</li>
+			<li> deleteTFoot() : It removes the tfoot.</li>
+			<li> 
+				insertRow() : This method inserts a new row in the table and returns a reference to the new row.<br>
+				Syntax: var row = HTMLTableElement.insertRow(index = -1);<br>
+				index is the row index of the new row.<br>
+				row is assigned a new reference to the new row. A reference to HTMLTableRowElement. If index is -1 or equal to the number of rows, the row is appended as the last row. If index is greater than the number of rows, an IndexSizeError exception will result. If index is omitted the default is -1.<br>
+				If a table has multiple body elements, by default, the new row is inserted into the last tbody.
+			</li>
+			<li> deleteRow() : Used to delete a Row.</li>
+		</ul>
+		
+		<table cellpadding="10px" id="table1">
+			<caption>
+				MyTable
+			</caption>
+			
+			<thead>
+				
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td> 1 </td>
+					<td> Rohit Sharma </td>
+					<td> Ram Sharma </td>
+					<td> 9392019583 </td>
+				</tr>
+				
+				<tr>
+					<td> 2 </td>
+					<td> Deepak Singh </td>
+					<td> Bhola Singh </td>
+					<td> 9392019583 </td>
+				</tr>
+				
+				<tr>
+					<td> 3 </td>
+					<td> KL Rahul </td>
+					<td> Vivek Kumar </td>
+					<td> 9392019583 </td>
+				</tr>
+				
+				<tr>
+					<td> 4 </td>
+					<td> Ishan Kishan </td>
+					<td> Vishal Kishan </td>
+					<td> 9392019583 </td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<script>
+			var table1 = document.querySelector("#table1");
+			console.log(table1.caption);
+			console.log(table1.caption.textContent);
+			table1.caption.textContent = "New Caption";
+			console.log(table1.tHead);
+			table1.tHead.innerHTML = "<tr> <th>S.No.</th> <th>Name</th> <th>Father's Name</th> <th>Contact</th> </tr>";
+			console.log(table1.rows);
+			console.log(table1.tBodies[0]);
+			console.log(table1.tBodies[0].textContent);
+			
+			table1.createCaption().innerHTML = "N caption";
+			
+			console.log(table1.createTHead());
+			
+			table1.createTFoot();
+			
+			var row6 = table1.insertRow(-1);		// We should always give the index.
+			row6.insertCell(0).textContent = "5";
+			row6.insertCell(1).textContent = "Rishabh Pant";
+			row6.insertCell(2).textContent = "Manoj Pant";
+			row6.insertCell(3).textContent = "9392019583";
+			
+			table1.deleteRow(2);
+		</script>
+	</body>
+</html>

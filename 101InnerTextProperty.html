@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Inner Text </title>
+	</head>
+	<body>
+		<h1> innerText property </h1>
+		<hr>
+		
+		<p>
+			The innerText property works similarly to innerHTML property, except that it is focused solely on the textual content contained within an element. The innerText property sets or returns the textual content of the specified node, and all its descendants. If you set the innerText property, any child nodes are replaced by a single Text node containing the specified string. This feature was originally introduced by Internet Explorer, and was formally specified in the HTML standard in 2016 after being adopted by all major browser vendors. To set or return the HTML content of an element, use the innerHTML property.
+		</p>
+		
+		<div id="d1">
+			<p> This is a paragraph </p>
+		</div>
+		
+		<script>
+			var d1 = document.querySelector("#d1");
+			console.log(d1.innerHTML);
+			
+			d1.innerText = "This text is inserted using innerText property.";
+			console.log(d1.innerHTML);
+		</script>
+	</body>
+</html>

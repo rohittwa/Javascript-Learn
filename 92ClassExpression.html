@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Class expression </title>
+		<style>
+			h1, h2{
+				font-family:arial;
+			}
+			
+			p{
+				font-size:14pt; font-family:tahoma;
+			}
+		</style>
+	</head>
+	<body>
+		<h1> Class expression </h1>
+		<hr>
+		
+		<p>
+			Class expression can be of two types named and unnamed.
+		</p>
+		
+		<h2> Javascript </h2>
+		
+		<script>
+			var Mobile = class{
+				constructor(){
+					this.name = "Realme";
+					this.color = "Black";
+					this.price = 4000;
+				}
+				
+				show(){
+					document.write("Name = "+ this.name + "<br>");
+					document.write("Color = "+ this.color + "<br>");
+					document.write("Price = "+ this.price + "<br>");
+				}
+			}
+			
+			var m = new Mobile();
+			m.show();
+			
+			var Mobile2 = class Mobile2_1{
+				constructor(){
+					this.name = "Samsung";
+					this.color = "Blue";
+					this.price = 5000;
+				}
+				
+				show(){
+					document.write("Name = "+ this.name + "<br>");
+					document.write("Color = "+ this.color + "<br>");
+					document.write("Price = "+ this.price + "<br>");
+				}
+			}
+			
+			var m2 = new Mobile2();
+			m2.show();
+		</script>
+	</body>
+</html>

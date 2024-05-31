@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Set clear interval </title>
+	</head>
+	<body>
+		<h1> Set clear interval </h1>
+		<hr>
+		
+		<p>
+			setInterval() method is used to create animation by using javascript. By using this we can create an animation which runs after every given milliseconds with some change or not.<br>
+			
+			clearInterval() method is used to stop the animation created by setInterval() method after fulfilling a given condition.
+		</p>
+		
+		<div id="d1"></div>
+		
+		<script>
+			var a=1;
+			var interval = setInterval(num, 1000);
+			
+			function num(){
+				if(a == 10){
+					clearInterval(interval);
+				}
+				else{
+					document.querySelector("#d1").innerHTML = a;
+				}
+				
+				a++;
+			}
+		</script>
+	</body>
+</html>
