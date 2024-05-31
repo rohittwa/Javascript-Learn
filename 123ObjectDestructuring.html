@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Object Destructuring</title>
+	</head>
+	<body>
+		<h1>Object Destructuring</h1>
+		<hr>
+		
+		<script>
+			var course = {
+				courseName:"Java",
+				duration:"6 months",
+				tutor:"Geeky Shows"
+			};
+			
+			var {courseName:cName, duration:time, tutor:teacher} = course;		// The keywords must be the same as in the object.
+			// cName, time, and teacher are alias names of keywords.
+			document.write("Course Name : " + cName + "<br>");
+			document.write("Duration : " + time + "<br>");
+			document.write("Tutor : " + teacher + "<br>");
+			// We can get the values of those keywords which we are needed. We can omit some keywords.
+			
+			document.write("<br>");
+			var a, b;
+			({a, b} = {a:10, b:20});
+			document.write("a = " + a + "<br>");
+			document.write("b = " + b + "<br>");
+			
+			document.write("<br>");
+			var {c:c1=3, d:d1=4} = {c:30, d:40};
+			document.write("c1 = " + c1 + "<br>");
+			document.write("d1 = " + d1 + "<br>");
+			
+			var course2 = {
+				courseName:"Python",
+				duration:"6 months",
+				tutor:"Geeky Shows"
+			};
+			
+			document.write("<br>");
+			function pythonCourse({courseName:cName, duration:time, tutor}){
+				document.write("Course Name : " + cName + "<br>");
+				document.write("Duration : " + time + "<br>");
+				document.write("Teacher : " + tutor + "<br>");
+			}
+			pythonCourse(course2);
+			
+			document.write("<br>");
+			function pythonCourse2(course){
+				return course;
+			}
+			var pythonC = pythonCourse2(course2);
+			console.log(pythonC);
+			document.write(pythonC.courseName + "<br>");
+			document.write(pythonC.duration + "<br>");
+			document.write(pythonC.tutor + "<br>");
+			
+			document.write("<br>");
+			var course3 = {
+				name:"C",
+				duration:"6 months",
+				teacher:"Geeky Shows",
+				
+				stud:{
+					s1:"Dinesh",
+					s2:"Shubhman",
+					s3:"Shivam"
+				}
+			};
+			// We can destructure the nested object like following:
+			var {name, duration:time, teacher:tutor, stud:{s1, s2, s3}} = course3;
+			document.write(name + "<br>");
+			document.write(time + "<br>");
+			document.write(tutor + "<br>");
+			document.write(s1 + "<br>");
+			document.write(s2 + "<br>");
+			document.write(s3 + "<br>");
+		</script>
+	</body>
+</html>

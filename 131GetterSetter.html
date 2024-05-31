@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            name;
+            age=20;
+            gender;
+
+            set age(a)
+            {
+                this.age = a;
+            }
+
+            get age()
+            {
+                return this.age;
+            }
+        }
+
+        var p = new Person();
+        p.age = 23;
+        document.write(p.age);
+    </script>
+</body>
+</html>

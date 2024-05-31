@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Destructuring Array</title>
+	</head>
+	<body>
+		<h1>Destructuring Array</h1>
+		
+		<script>
+			var book1 = ["The theory of Everyting", 400, "Samrat Singh"];
+			var [name, price, author] = book1;
+			document.write("name = " + name + "<br>");
+			document.write("price = " + price + "<br>");
+			document.write("author = " + author + "<br>");
+			
+			var [name2, , author2] = book1;						// We can skip a value.
+			document.write("name2 = " + name2 + "<br>");
+			document.write("author2 = " + author2 + "<br>");
+			
+			var [name3, price3, author3, chapters=12] = book1;	// We can give default value to a variable.
+			
+			document.write("name3 = " + name3 + "<br>");
+			document.write("price3 = " + price3 + "<br>");
+			document.write("author3 = " + author3 + "<br>");
+			document.write("chapters = " + chapters + "<br>");
+			
+			function book([a, b, c]){
+				document.write("Name = " + a + "<br>");
+				document.write("Price = " + b + "<br>");
+				document.write("Author = " + c + "<br>");
+			}
+			book(book1);
+		</script>
+	</body>
+</html>

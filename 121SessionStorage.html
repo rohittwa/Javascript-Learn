@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Session Storage </title>
+	</head>
+	<body>
+		<h1> Session Storage </h1>
+		<hr>
+		
+		<p>
+			The sessionStorage is a read only property of window object. It stores data in a web browser specifically to the domain and protocol for a particular session. It doesn't get sent to the server. Data stored in sessionStorage get cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores.
+		</p>
+		
+		Methods:
+		<ul>
+			<li> setItem(key, value) : It allows to add a key/value pair to the storage object. If the key already exists, the name value will overwrite the old value. </li>
+			
+			<li> getItem(key) : It returns the value of the item that is set with the given key.  </li>
+			
+			<li> key(n) : It returns the key of the item in the storage object at the nth index which can be useful for looping. </li>
+			
+			<li> removeItem(key) : It removes the item in the storage object with the given key. </li>
+			
+			<li> clear() : It removes all the rows from the localStorage. </li>
+		</ul>
+	
+		<script>
+			window.sessionStorage.setItem("name", "rahul");
+			console.log(window.sessionStorage);
+		</script>
+	</body>
+</html>

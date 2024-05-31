@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        /*
+            Promise is a promise to execute a code. When the code is fulfilled then we can perform some operations further and if the code rejects then also we can perform some operations.
+        */
+        var p1 = new Promise((resolve, reject)=>{
+            console.log("Promise is pending");
+
+            setTimeout(()=>{
+                resolve(true);
+            }, 3000);
+
+            setTimeout(()=>{
+                reject(false);
+            }, 3000);
+        });
+        p1.then((value)=>{
+            console.log(value);
+        });
+        p1.catch((error)=>{
+            console.log("The error is catched.")
+        });
+
+        var p2;
+        function cal(n1, n2)
+        {
+            p2 = new Promise(function(resolve, reject){
+                let ans = n1/n2;
+                if(n1, n2)
+                {
+                    resolve(`Answer is ${ans}.`);
+                }
+                else{
+                    reject("Failed to calculate.")
+                }
+            });
+        }
+        cal(5, 0);
+        cal(5, 2);
+        p2.then(function(value){console.log(value);});
+        p2.catch(function(error){console.log(error);});
+    </script>
+</body>
+</html>

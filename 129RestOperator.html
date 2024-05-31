@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+    <script>
+        function sum()
+        {
+            console.log(arguments);
+            console.log(arguments[0]);
+            var sum=0;
+            for(var i in arguments)
+            {
+                sum += arguments[i];
+            }
+
+            document.write("sum = " + sum);
+        }
+        sum(28, 44, 1);
+
+        function marks(name, ...mark)
+        {
+            document.write("<br>Name = " + name);
+            let total=0;
+            for(let i in mark)
+            {
+                total+= mark[i];
+            }
+            document.write("<br>Total Marks = " + total);
+        }
+        marks("rohit", 48, 83, 69, 63);
+
+        // Rest parameter must be a last parameter.
+    </script>
+</body>
+</html>

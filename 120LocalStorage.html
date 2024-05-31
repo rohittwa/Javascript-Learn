@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Local storage </title>
+	</head>
+	<body>
+		<h1> Local storage </h1>
+		<hr>
+		
+		<p>
+			The localStorage is a read only property of window object. It stores data in a web browser specifically to the domain and protocol. It doesn't get sent to the server as it is stored locally in the web browser with no expiration date. The data will not be deleted when the browser is closed and reopened.<br>
+			
+			Syntax : window.localStorage;
+		</p>
+		
+		Methods:
+		<ul>
+			<li> setItem(key, value) : It allows to add a key/value pair to the storage object. If the key already exists, the name value will overwrite the old value. </li>
+			
+			<li> getItem(key) : It returns the value of the item that is set with the given key.  </li>
+			
+			<li> key(n) : It returns the key of the item in the storage object at the nth index which can be useful for looping. </li>
+			
+			<li> removeItem(key) : It removes the item in the storage object with the given key. </li>
+			
+			<li> clear() : It removes all the rows from the localStorage. </li>
+		</ul>
+		
+		<script>
+			window.localStorage.setItem("name", "rohit");
+			console.log(window.localStorage);
+			console.dir(navigator);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Promise And Async Await</title>
+	</head>
+	<body>
+		<h1>Promise And Async Await</h1>
+		<hr>
+		
+		<script>
+			/*
+				Async function is an updated version of promise in which we don't need to declare then and catch function. It automatically calls these functions.
+			*/
+			async function test(){
+				return "Hello";
+			}
+			console.log(test());
+			test().then((value)=>{
+				console.log(value);
+			});
+
+			/*
+				await method is used to run the forward code after executing all the code outside the asynchronous function. It is only used with asynchronous function.
+			*/
+			async function waiting()
+			{
+				console.log("A");
+				console.log("B");
+				await console.log("C");
+				console.log("D");
+			}
+			waiting();
+			console.log("E");
+
+			async function rohit()
+			{
+				console.log("Rohit");
+			}
+			rohit();
+		</script>
+	</body>
+</html>
